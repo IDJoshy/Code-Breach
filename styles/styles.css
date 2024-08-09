@@ -204,6 +204,7 @@ body
 
     .navbar__hamburger__button__icons--image
     {
+        position: absolute;
         width: 30px;
         height: 30px;
     }
@@ -214,17 +215,6 @@ body
         width: 40px;
         height: 40px;
         transition: .2s;
-    }
-
-    .navbar__hamburger__button__icons--open
-    {
-        position: absolute;
-    }
-
-    .navbar__hamburger__button__icons--close
-    {
-        position: absolute;
-        display: none;
     }
 
     .navbar__hamburger__menu
@@ -362,7 +352,7 @@ body
     {
         margin: 10px 0px;
     }
-    
+
     .navbar__hamburger__list__socials
     {
         margin: 0px 0px;
@@ -370,7 +360,6 @@ body
         align-self: center;
     }
 }
-
 
 @media only screen and (max-width: 1080px)
 {
@@ -417,6 +406,18 @@ body
     {
         display: none;
     }
+}
+
+/* Logic */
+
+.navbar__hamburger__button__icons--hidden
+{
+    display: none;
+}
+
+.navbar__hamburger__menu--hidden
+{
+    display: none;
 }
 
 /* #endregion */
