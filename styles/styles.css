@@ -244,6 +244,36 @@ body
 
 /* #endregion */
 
+/* #region Hamburger menu */
+
+.navbar__hamburger__menu
+{
+    position: fixed;
+    top: 4.75rem;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    align-content: center;
+    border-top: #e11900 1px solid;
+}
+
+.navbar__hamburger__menu:before
+{
+    display: block;
+    position: fixed;
+    top: 4.75rem;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    content: "";
+    z-index: -1;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, .5)
+}
+
+/* #endregion */
+
 /* #region content */
 
 .content__container
