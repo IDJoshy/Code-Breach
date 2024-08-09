@@ -146,18 +146,6 @@ body
     text-transform: uppercase;
 }
 
-.navbar__hamburger__button
-{
-    grid-area: hamburger;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: var(--nav-height);
-    height: var(--nav-height);
-    justify-self: flex-start;
-    padding: 0 1.125rem;
-}
-
 .navbar__icon
 {
     fill: var(--color-default, #dadad1);
@@ -169,14 +157,6 @@ body
 .navbar__icon--get
 {
     fill: #e9bc29;
-}
-
-.navbar__icon--hamburger:hover
-{
-    fill: #e9bc29;
-    width: 35px;
-    height: 35px;
-    transition: .15s;
 }
 
 .navbar__icon--instagram:hover
@@ -197,54 +177,46 @@ body
     transition: .25s;
 }
 
-/* Media queries */
-
-@media only screen and (max-width: 1080px)
-{
-    .navbar__links
-    {
-        display: none;
-    }
-    .navbar__socials
-    {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 1080px) 
-{
-    .navbar__container
-    .navbar__content
-    {
-        display: grid;
-        grid-template-areas: "links socials get";
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr auto auto;
-        column-gap: 1rem;
-    }
-
-    .navbar__links
-    {
-        display: flex;
-        align-items: center;
-    }
-
-    .navbar__socials
-    {
-        display: flex;
-        align-items: center;
-    }
-
-    .navbar__hamburger__button
-    {
-        display: none;
-    }   
-
-}
-
-/* #endregion */
-
 /* #region Hamburger menu */
+
+.navbar__hamburger__button
+{
+    grid-area: hamburger;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: var(--nav-height);
+    height: var(--nav-height);
+    justify-self: flex-start;
+    padding: 0 1.125rem;
+}
+
+.navbar__hamburger__button__icons
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__hamburger__button__icons--image
+{
+    width: 30px;
+    height: 30px;
+}
+
+.navbar__hamburger__button__icons--image:hover
+{
+    filter: blur();
+    width: 40px;
+    height: 40px;
+    transition: .15s;
+}
+
+.navbar__hamburger__button__icons--open
+{
+    position: absolute;
+}
+
 
 .navbar__hamburger__menu
 {
@@ -376,6 +348,53 @@ body
 {
     display: none;
 } */
+
+/* Media queries */
+
+@media only screen and (max-width: 1080px)
+{
+    .navbar__links
+    {
+        display: none;
+    }
+    .navbar__socials
+    {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1080px) 
+{
+    .navbar__container
+    .navbar__content
+    {
+        display: grid;
+        grid-template-areas: "links socials get";
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto auto;
+        column-gap: 1rem;
+    }
+
+    .navbar__links
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar__socials
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar__hamburger__button
+    {
+        display: none;
+    }   
+
+}
+
+/* #endregion */
 
 /* #endregion */
 
