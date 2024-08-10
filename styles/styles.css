@@ -5,7 +5,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    text-decoration: none
+    text-decoration: none;
+    line-height: 1;
 }
 
 :root 
@@ -35,6 +36,11 @@ body
     background-color: var(--color-shadow,#181818);
     color: var(--color-default, #dadad1);
     overflow-x: hidden
+}
+
+a
+{
+    text-decoration: none;
 }
 
 /* #endregion */
@@ -81,6 +87,7 @@ body
     .navbar__list
     {
         padding-left: 1.125rem;
+        margin-bottom: 0;
     }
 
     .navbar__link
@@ -265,6 +272,8 @@ body
         display: flex;
         flex-direction: column;
         gap: 5px;
+        margin-bottom: 0rem;
+        padding-left: 0rem;
     }
 
     .navbar__hamburger__list__links--item
@@ -1282,6 +1291,8 @@ body
 .about--header
 {
     --page-title-length: 8;
+    line-height: 1;
+    margin-bottom: 0rem;
 }
 
 .about__personal
