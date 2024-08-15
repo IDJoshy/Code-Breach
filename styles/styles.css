@@ -1315,6 +1315,7 @@ a
     width: 100%;
     padding-top: 4.75rem;
     overflow: hidden;
+    border-bottom: #e11900 1px solid;
 }
 
 .about__personal
@@ -1690,6 +1691,7 @@ a
     width: 100%;
     height: 100vh;
     border-bottom: #e11900 1px solid;
+    overflow: hidden;
 }
 
 .page__hero__background
@@ -1738,6 +1740,8 @@ a
     color: var(--color-red);
     font-size: 3.25em;
     font-weight: 800;
+
+    animation: fadeIn .25s;
 }
 
 .page__hero__text--subheader
@@ -1745,6 +1749,16 @@ a
     color: #aaf9fa;
     font-size: 1.15em;
     font-style: italic;
+
+    animation: fadeIn .5s;
+}
+
+/* Text Fade-In Animation */
+
+@keyframes fadeIn
+{
+    0% {opacity: 0}
+    100% {opacity: 1}
 }
 
 .page__hero__text--preheader
@@ -1760,7 +1774,7 @@ a
     border-right: 2px solid;
 
     animation: 
-        typing .75s steps(var(--page-title-length)),
+        typing .3s steps(var(--page-title-length)),
         cursor .4s step-end infinite alternate;
 }
 
