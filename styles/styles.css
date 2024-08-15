@@ -33,7 +33,7 @@ div
 
 body
 {
-    font-family: Inconsolata, sans-serif, Nunito Sans;
+    font-family: Inconsolata, "Ubuntu Mono", monospace;
     background-color: var(--color-shadow,#181818);
     color: var(--color-default, #dadad1);
     overflow-x: hidden;
@@ -1290,7 +1290,7 @@ a
 
 /* #region about.html */
 
-.page__hero__text--about
+.page__hero__text--subheader-about
 {
     --page-title-length: 8;
     line-height: 1;
@@ -1700,7 +1700,7 @@ a
     filter: brightness(.7);
     height: 100vh;
     width: 100vw;
-    z-index: -1;
+    z-index: -2;
 }
 
 .page__hero__background--video
@@ -1712,27 +1712,44 @@ a
 
 .page__hero__text
 {
+    display: flex;
+    flex-direction: column; 
+    gap:2.5%;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+}
+
+.page__hero__text__container
+{
     margin-top: 7.5rem;
-    margin-left: 1rem;
     width: fit-content;
 }
 
-.page__hero__text--text
+.page__hero__text--header-pre
 { 
-    color: var(--color-yellow);
-    font-size: 2.5em;
+    font-size: 1.25em;
     text-align: left;
     user-select: none;
-    width: 100%;
     white-space: nowrap;
     text-transform: uppercase;
-    overflow: hidden;
 
     border-right: 5px solid;
 
     animation: 
         typing .75s steps(var(--page-title-length)),
         cursor .4s step-end infinite alternate;
+}
+
+.page__hero__text--header
+{
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 3.25em;
+}
+
+.page__hero__text--header-sub
+{
+    font-size: 1.5em;
 }
 
 /* cursor blink */
