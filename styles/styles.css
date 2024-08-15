@@ -33,7 +33,7 @@ div
 
 body
 {
-    font-family: Inconsolata, Helvetica, Arial, Lucida, sans-serif, Nunito Sans;
+    font-family: Inconsolata, sans-serif, Nunito Sans;
     background-color: var(--color-shadow,#181818);
     color: var(--color-default, #dadad1);
     overflow-x: hidden;
@@ -1267,7 +1267,7 @@ a
 
 /* #region media.html */
 
-.media--header
+.page__hero__text--media
 {
     --page-title-length: 8;
 }
@@ -1290,55 +1290,11 @@ a
 
 /* #region about.html */
 
-.about--header
+.page__hero__text--about
 {
     --page-title-length: 8;
     line-height: 1;
     margin-bottom: 0rem;
-}
-
-.about__personal
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    width: 100%;
-    height: 100%;
-}
-
-.about__personal__introduction
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5em;
-    width: 275px;
-    height: 100%;   
-    padding: 15px 15px;
-    background-color: rgba(0,0,0,.1);
-    margin-bottom: 50px;
-}
-
-.about__personal--portrait
-{
-    margin-top: 150px;
-    width: 275px;
-    height: 275px;
-    border-radius: 50%;
-}
-
-.about__personal__introduction--header
-{
-    text-align: center;
-    font-size: 1em;
-}
-
-.about__personal__introduction--paragraph
-{
-    text-align: justify;
-    font-size: .95em;
 }
 
 .about__content--header
@@ -1349,6 +1305,65 @@ a
     color: var(--color-yellow);
     margin: 100px 0px;
 }   
+
+/* About Me */
+
+.about
+{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 4.75rem;
+    overflow: hidden;
+}
+
+.about__personal
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.about__personal--portrait
+{
+    margin-top: 1.5rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.about__personal__introduction
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 275px;
+    height: 100%;   
+    padding: 15px 15px;
+    background-color: rgba(0,0,0,.1);
+}
+
+.about__personal__introduction--header
+{
+    text-align: center;
+    font-size: .75em;
+    color: #e5d4f9;
+}
+
+.about__personal__introduction--paragraph
+{
+    text-align: justify;
+    font-size: .65em;
+    color: #c79aff;
+}
+
+/* Tech Stack*/
 
 .about__tech__card
 {
@@ -1384,13 +1399,23 @@ a
     {
         .about__personal--portrait
         {
-            width: 300px;
-            height: 300px;
+            width: 225px;
+            height: 225px;
         }
 
         .about__personal__introduction
         {
             width: 325px;
+        }
+
+        .about__personal__introduction--header
+        {
+            font-size: .8em;
+        }
+
+        .about__personal__introduction--paragraph
+        {
+            font-size: .7em;
         }
     }
 
@@ -1399,15 +1424,27 @@ a
     {
         .about__personal--portrait
         {
-            width: 325px;
-            height: 325px;
+            width: 225px;
+            height: 225px;
         }
 
         .about__personal__introduction
         {
-            width: 400px;
+            width: 350px;
+        }
+
+        .about__personal__introduction--header
+        {
+            font-size: .85em;
+        }
+
+        .about__personal__introduction--paragraph
+        {
+            font-size: .75em;
         }
     }
+
+    /* Tablet-Transition */
 
     @media screen and (min-width: 768px) 
     {
@@ -1415,16 +1452,12 @@ a
         {
             display: grid;
             grid-template-areas: "about__personal__introduction about__personal--portrait";
-            justify-content: center;
             align-items: center;
-            gap: 50px;
-            width: 100%;
-            height: 100%;
+            gap: 10%;
         }
 
         .about__personal__introduction
         {
-            margin-top: 175px;
             grid-area: about__personal__introduction;
             width: 400px;
             height: 275px;
@@ -1432,11 +1465,10 @@ a
 
         .about__personal--portrait
         {
+            margin-top: 0px;
             grid-area: about__personal--portrait;
             width: 225px;
             height: 225px;
-            margin-top: 0px;
-            margin-bottom: 75px;
         }
 
         .about__personal__introduction--header
@@ -1463,31 +1495,26 @@ a
     /* Laptop */
     @media screen and (min-width: 1024px) and (max-width: 1439px)
     {
-        .about__personal
-        {
-            gap: 125px;
-        }
-
         .about__personal__introduction
         {
-            width: 450px;
-            height: 300px;
+            width: 500px;
+            height: 325px;
         }
 
         .about__personal--portrait
         {
-            width: 275px;
-            height: 275px;
+            width: 280px;
+            height: 280px;
         }
 
         .about__personal__introduction--header
         {
-            font-size: 1.15em;
+            font-size: 1.20em;
         }
         
         .about__personal__introduction--paragraph
         {
-            font-size: 1em;
+            font-size: 1.15em;
         }  
     }
 
@@ -1501,26 +1528,26 @@ a
 
         .about__personal__introduction
         {
-            margin-top: 250px;
+            margin-top: 25%;
             width: 650px;
-            height: 300px;
+            height: 350px;
         }
 
         .about__personal--portrait
         {
-            width: 325px;
-            height: 325px;
+            width: 350px;
+            height: 350px;
             margin-right: 50px;
         }
 
         .about__personal__introduction--header
         {
-            font-size: 1.25em;
+            font-size: 1.35em;
         }
         
         .about__personal__introduction--paragraph
         {
-            font-size: 1.15em;
+            font-size: 1.20em;
         }
     }
 
@@ -1529,33 +1556,31 @@ a
     {
         .about__personal
         {
-            gap: 275px;
+            gap: 10%;
         }
 
         .about__personal__introduction
         {
-            margin: 400px 0px 300px 0px;
-            width: 1100px;
-            height: 700px;
-            padding: 25px 25px;
+            margin-top: 25%;
+            width: 1000px;
+            height: fit-content;
         }
 
         .about__personal--portrait
         {
             width: 650px;
             height: 650px;
-            margin-bottom: 400px;
-            margin-right: 100px;
+            margin-right: 50px;
         }
 
         .about__personal__introduction--header
         {
-            font-size: 2.75em;
+            font-size: 2.5em;
         }
         
         .about__personal__introduction--paragraph
         {
-            font-size: 2.5em;
+            font-size: 2.25em;
         }
     }
 
@@ -1659,26 +1684,48 @@ a
 
 /* #region pages */
 
-#page__header__container
+.page__hero
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 100%;
+    height: 100vh;
+    border-bottom: #e11900 1px solid;
+}
+
+.page__hero__background
 {
     position: absolute;
-    top: 7.5rem;
-    left: 2rem;
-    z-index: 9;
+    filter: brightness(.7);
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
 }
 
-.page__header
+.page__hero__background--video
 {
-    height: fit-content;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
-.page__header--text
+.page__hero__text
 {
-    font-size: 3.5em;
+    margin-top: 7.5rem;
+    margin-left: 1rem;
+    width: fit-content;
+}
+
+.page__hero__text--text
+{ 
+    color: var(--color-yellow);
+    font-size: 2.5em;
     text-align: left;
     user-select: none;
     width: 100%;
     white-space: nowrap;
+    text-transform: uppercase;
     overflow: hidden;
 
     border-right: 5px solid;
@@ -1686,32 +1733,6 @@ a
     animation: 
         typing .75s steps(var(--page-title-length)),
         cursor .4s step-end infinite alternate;
-}
-
-@media screen and (max-width: 568px)
-{
-    .page__header--text
-    {
-        font-size: 3.25em;
-    }
-}
-
-@media screen and (max-width: 480px)
-{
-    .page__header--text
-    {
-        font-size: 2.5em;
-    }
-
-}
-
-@media screen and (min-width: 2259px)
-{
-    .page__header--text
-    {
-        font-size: 5em;
-    }
-
 }
 
 /* cursor blink */
@@ -1724,6 +1745,62 @@ a
 @keyframes typing
 {
     from {width: 0}
+}
+
+.page__hero__menu
+{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 2rem;
+    display: none;
+}
+
+.page__hero__menu--list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page__hero__menu--list-item
+{
+    display: flex;
+    align-items: center;
+}
+
+.page__hero__menu--list-item-link
+{
+    font-size: 1.25em;
+    padding-left: 17.5px;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--color-default);
+    width: 100%;
+}
+
+.page__hero__menu__image
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    width: fit-content;
+    height: fit-content;
+    z-index: -1;
+}
+
+.page__hero__menu__image--image
+{
+    width: 30px;
+    height: 50px;
+}
+
+.page__hero__menu__image--image-center
+{
+    width: 50px;
 }
 
 /* #endregion */

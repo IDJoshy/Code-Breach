@@ -247,21 +247,82 @@
 
             <div class="main__content">
 
-                <div id="page__header__container">
-                    <div class="page__header">
-                        <h1 class="page__header--text about--header"> 
+                <div class="page__hero">
+
+                    <div class="page__hero__background">
+                        <video class="page__hero__background--video" autoplay loop muted playsinline>
+                            <source src="../media/video/movie_003.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="page__hero__text">
+                        <h1 class="page__hero__text--text page__hero__text--about"> 
                             > About.
                         </h1>
-                    </div>    
+                    </div>
+
+                    <div class="page__hero__menu">
+
+                        <ul class="page__hero__menu--list">
+
+                            <li class="page__hero__menu--list-item">
+                                ../
+                            </li>
+
+                            <li class="page__hero__menu--list-item">
+
+                                <div class="page__hero__menu__image">
+                                    <img class="page__hero__menu__image--image" src="../media/image/page/menu_icon_start.png" alt="">
+                                    <img class="page__hero__menu__image--image" src="../media/image/page/menu_icon_center.png" alt="">
+                                    <img class="page__hero__menu__image--image" src="../media/image/page/menu_icon_end.png" alt="">
+                                </div>
+
+                                <a class="page__hero__menu--list-item-link" href="#me">
+                                    _Me/
+                                </a>
+                            </li>
+
+                            <li class="page__hero__menu--list-item">
+                                
+                                <div class="page__hero__menu__image">
+                                    <img class="page__hero__menu__image--image" src="../media/image/page/menu_icon_start.png" alt="">
+                                    <img class="page__hero__menu__image--image page__hero__menu__image--image-center" src="../media/image/page/menu_icon_center.png" alt="">
+                                    <img class="page__hero__menu__image--image" src="../media/image/page/menu_icon_end.png" alt="">
+                                </div>
+
+                                <a class="page__hero__menu--list-item-link" href="#tech">
+                                    _Stack/
+                                </a>
+                            </li>
+
+                            <li class="page__hero__menu--list-item">
+
+                                <div class="page__hero__menu__image">
+                                    <img class="page__hero__menu__image--image" src="../media/image/page/menu_icon_start.png" alt="">
+                                    <img class="page__hero__menu__image--image" src="../media/image/page/menu_icon_center.png" alt="">
+                                    <img class="page__hero__menu__image--image page__hero__menu__image--image-center" src="../media/image/page/menu_icon_center.png" alt="">
+                                    <img class="page__hero__menu__image--image" src="../media/image/page/menu_icon_end.png" alt="">
+                                </div>
+
+                                <a class="page__hero__menu--list-item-link" href="#projects">
+                                    _Projects/
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
                 </div>
     
-                <div class="about__personal__container content__container">
-        
+                <div id="me" class="about">
+       
                     <div class="about__personal">
 
                         <img class="about__personal--portrait" src="../media/image/about/introduction.png" alt="">
 
                         <div class="about__personal__introduction">
+                            
                             <h2 class="about__personal__introduction--header">
                                 Hi! I'm Joshua Auristondo
                             </h2>
@@ -278,7 +339,7 @@
     
                 </div>
 
-                <div class="about__tech__container content__container">
+                <div id="tech" class="about__tech__container content__container">
 
                     <h2 class="about__content--header">
                         Tech Stack
@@ -341,9 +402,10 @@
                             </div>
                           </div>
                     </div>
+
                 </div>
 
-                <div class="about__projects__container content__container">
+                <div id="projects" class="about__projects__container content__container">
 
                     <h2 class="about__content--header">
                         Personal Projects
