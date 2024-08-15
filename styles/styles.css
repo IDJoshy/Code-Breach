@@ -1258,16 +1258,25 @@ a
 
 /* #region game.html */
 
-.game--header
+.page__hero__text--subheader-game
 {
     --page-title-length: 11;
 }
 
 /* #endregion */
 
+/* #region shop.html */
+
+.page__hero__text--subheader-shop
+{
+    --page-title-length: 7;
+}
+
+/* #endregion */
+
 /* #region media.html */
 
-.page__hero__text--media
+.page__hero__text--subheader-media
 {
     --page-title-length: 8;
 }
@@ -1279,22 +1288,12 @@ a
 
 /* #endregion */
 
-/* #region shop.html */
-
-.shop--header
-{
-    --page-title-length: 7;
-}
-
-/* #endregion */
-
 /* #region about.html */
 
 .page__hero__text--subheader-about
 {
     --page-title-length: 8;
-    line-height: 1;
-    margin-bottom: 0rem;
+    font-weight: 100;
 }
 
 .about__content--header
@@ -1725,37 +1724,44 @@ a
     width: fit-content;
 }
 
-.page__hero__text--header-pre
+.page__hero__text--text
+{
+    text-align: left;
+    font-family: "Ubuntu Mono", monospace;
+    user-select: none;
+    margin-bottom: 0rem;
+    line-height: 1.2
+}
+
+.page__hero__text--header
+{
+    color: var(--color-red);
+    font-size: 3.25em;
+    font-weight: 800;
+}
+
+.page__hero__text--subheader
+{
+    color: #aaf9fa;
+    font-size: 1.15em;
+    font-style: italic;
+}
+
+.page__hero__text--preheader
 { 
     color: var(--color-yellow);
     font-size: 1em;
-    text-align: left;
-    user-select: none;
+    font-weight: 50;
     white-space: nowrap;
     text-transform: uppercase;
+    overflow: hidden;
+    width: 100%;
 
     border-right: 2px solid;
 
     animation: 
         typing .75s steps(var(--page-title-length)),
         cursor .4s step-end infinite alternate;
-}
-
-.page__hero__text--header
-{
-    font-family: "Ubuntu Mono", monospace;
-    text-align: left;
-    color: var(--color-red);
-    font-size: 3.25em;
-}
-
-.page__hero__text--header-sub
-{
-    font-family: "Ubuntu Mono", monospace;
-    text-align: left;
-    color: #aaf9fa;
-    font-style: italic;
-    font-size: 1.25em;
 }
 
 /* cursor blink */
@@ -1793,12 +1799,12 @@ a
     align-items: center;
     height: 40px;
     border: #ffffff 1px solid;
-    background: linear-gradient(45deg, #222233, #11111b);
+    background-color: #000000;
 }
 
 .page__hero__menu--button:hover
 {
-    background: linear-gradient(90deg, #9b9bd4, #8484d4);
+    background-color: #ac0000;
     transition: .25s;
 }
 
@@ -1808,17 +1814,17 @@ a
     padding-left: 12.5px;
     text-transform: uppercase;
     text-align: left;
-    color: var(--color-default);
+    color: var(--color-yellow);
     width: 100%;
 }
 
 .page__hero__menu--button-small
 {
-    width: 65px;
+    width: 75px;
 }
 .page__hero__menu--button-small:hover
 {
-    width: 75px;
+    width: 100px;
 }
 
 .page__hero__menu--button-medium
@@ -1827,17 +1833,258 @@ a
 }
 .page__hero__menu--button-medium:hover
 {
-    width: 115px;
+    width: 125px;
 }
 
 .page__hero__menu--button-large
 {
-    width: 130px;
+    width: 125px;
 }
 .page__hero__menu--button-large:hover
 {
-    width: 145px;
+    width: 150px;
 }
+
+/* #region Media queries */
+
+    /* Mobile Landscape */
+    @media screen and (max-height: 550px) and (orientation:landscape)
+    {
+        .page__hero
+        {
+            flex-direction: row;
+            gap: 0px;
+            align-items: center;
+        }
+
+        .page__hero__text
+        {
+            gap: 5px;
+        }
+
+        .page__hero__text__container
+        {
+            margin-top: 4.75rem;
+        }
+
+        .page__hero__menu
+        {
+            margin-top: 5rem;
+            margin-right: 30px;
+        }
+
+        .page__hero__menu--list-item
+        {
+            align-self: flex-end;
+        }
+
+        .page__hero__menu--button-link
+        {
+            text-align: center;
+        }
+    }
+
+    /* Tablet-Transition */
+    @media screen and (min-width: 768px) 
+    {
+        .page__hero__text--text
+        {
+            line-height: 1.25;
+        }
+
+        .page__hero__text--header
+        {
+            font-size: 4em;
+            font-weight: 850;
+        }
+
+        .page__hero__text--subheader
+        {
+            font-size: 1.5em;
+            font-style: italic;
+        }
+
+        .page__hero__text--preheader
+        { 
+            font-size: 1.25em;
+        }
+
+        .page__hero__menu--button
+        {
+            height: 45px;
+        }
+
+        .page__hero__menu--button-link
+        {
+            font-size: 1.25em;
+        }
+
+        .page__hero__menu--button-small
+        {
+            width: 100px;
+        }
+        .page__hero__menu--button-small:hover
+        {
+            width: 125px;
+        }
+
+        .page__hero__menu--button-medium
+        {
+            width: 125px;
+        }
+        .page__hero__menu--button-medium:hover
+        {
+            width: 150px;
+        }
+
+        .page__hero__menu--button-large
+        {
+            width: 150px;
+        }
+        .page__hero__menu--button-large:hover
+        {
+            width: 175px;
+        }
+
+    }
+
+    /* Laptop Large */
+    @media screen and (min-width: 1440px) and (max-width: 2559px)
+    {
+        .page__hero
+        {
+            gap: 6em;
+        }
+
+        .page__hero__text--header
+        {
+            font-size: 6.5em;
+            font-weight: 850;
+        }
+
+        .page__hero__text--subheader
+        {
+            font-size: 2.5em;
+            font-style: italic;
+        }
+
+        .page__hero__text--preheader
+        { 
+            font-size: 2em;
+        }
+
+        .page__hero__menu--button
+        {
+            height: 75px;
+        }
+
+        .page__hero__menu--button-link
+        {
+            font-size: 2em;
+        }
+
+        .page__hero__menu--button-small
+        {
+            width: 150px;
+        }
+        .page__hero__menu--button-small:hover
+        {
+            width: 200px;
+        }
+
+        .page__hero__menu--button-medium
+        {
+            width: 200px;
+        }
+        .page__hero__menu--button-medium:hover
+        {
+            width: 250px;
+        }
+
+        .page__hero__menu--button-large
+        {
+            width: 250px;
+        }
+        .page__hero__menu--button-large:hover
+        {
+            width: 275px;
+        }
+    }
+
+    /* 4K */
+    @media screen and (min-width: 2560px)
+    {
+        .page__hero
+        {
+            gap: 7.5em;
+        }
+
+        .page__hero__text
+        {
+            padding-left: 30px;
+        }
+
+        .page__hero__text--header
+        {
+            font-size: 10em;
+            font-weight: 850;
+        }
+
+        .page__hero__text--subheader
+        {
+            font-size: 5em;
+            font-style: italic;
+        }
+
+        .page__hero__text--preheader
+        { 
+            font-size: 3.5em;
+        }
+
+        .page__hero__menu
+        {
+            padding-left: 30px;
+        }
+
+        .page__hero__menu--button
+        {
+            height: 125px;
+        }
+
+        .page__hero__menu--button-link
+        {
+            font-size: 4em;
+            margin-left: 25px;
+        }
+
+        .page__hero__menu--button-small
+        {
+            width: 275px;
+        }
+        .page__hero__menu--button-small:hover
+        {
+            width: 350px;
+        }
+
+        .page__hero__menu--button-medium
+        {
+            width: 350px;
+        }
+        .page__hero__menu--button-medium:hover
+        {
+            width: 425px;
+        }
+
+        .page__hero__menu--button-large
+        {
+            width: 425px;
+        }
+        .page__hero__menu--button-large:hover
+        {
+            width: 500px;
+        }
+    }
+/* #endregion */
 
 
 /* #endregion */
