@@ -1,0 +1,385 @@
+/* #region navbar */
+
+//Navbar Menu
+
+.navbar__menu
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $nav-height;
+    width: 100vw;
+    z-index: 5;
+    align-content: center;
+
+    backdrop-filter: blur(2.4px);
+    background-color: rgba(0, 0, 0, .4);
+
+    &--hidden
+    {
+        display: none;
+    }
+}
+
+.navbar__content
+{
+    display: grid;
+    grid-template-areas: "hamburger get";
+    grid-template-columns: repeat(2, auto);
+    height: $nav-height;
+    width: 100vw;
+    align-items: center;
+
+    &--button
+    {
+        grid-area: hamburger;
+        justify-self: flex-start;
+        background: none;
+        border: none;
+        width: $nav-height;
+        height: $nav-height;
+        cursor: pointer;
+
+    }
+
+    &--link
+    {
+        grid-area: get;
+        align-self: center;
+        justify-self: flex-end;
+        margin-right: 1.25rem;
+
+        display: inline-flex;
+        align-items: center;
+        gap: .75rem;
+        padding: .875rem 1.5rem;
+
+        cursor: pointer;
+        font-size: 1em;
+        color: $color-yellow;
+        border-left: .125rem solid;
+        border-right: .125rem solid;
+        background: rgba(0, 0, 0, .3);
+        text-transform: uppercase;
+
+    }
+
+    &--icon
+    {
+        &-steam
+        {
+            fill: $color-yellow;
+        }
+    }
+}
+
+.navbar__button
+{
+    display: flex;
+    width: $nav-height;
+    height: $nav-height;
+    align-items: center;
+    justify-content: center;
+
+    &--icon
+    {   
+        position: absolute;
+        width: 30px;
+        height: 30px;
+    }
+
+    &--hidden
+    {
+        display: none;
+    }
+
+    :hover
+    {
+        filter: invert(55%) sepia(99%) saturate(439%) hue-rotate(351deg) brightness(100%) contrast(100%);
+        width: 40px;
+        height: 40px;
+        transition: .2s;
+    }
+}
+
+.navbar__links
+{
+    grid-area: links;
+
+    display: none;
+    align-items: center;
+    height: $nav-height;
+    width: fit-content;
+    margin-left: 2em;
+
+    &--list
+    {
+        display: flex;
+        flex-direction: row;
+        gap : 2.5em;
+        list-style: none;
+    }
+
+    &--item
+    {
+        width: fit-content;
+        height: fit-content;  
+        
+        :hover
+        {
+            color: $color-cyan;
+            transition: .2s;
+        }
+    }
+
+    &--link
+    {
+        font-family: Inconsolata;
+        font-size: x-large;
+        text-decoration: none;
+        color: $color-default;
+
+        &-current
+        {
+            color: $color-yellow;
+        }
+    }
+
+}
+
+.navbar__socials
+{
+    grid-area: socials;
+    display: none;
+    height: fit-content;
+    width: fit-content;
+
+    margin: 0px 50px;
+
+    &--list
+    {
+        display: flex;
+        flex-direction: row;
+        gap : 2rem;
+        list-style: none;
+    }
+
+    &--item
+    {
+        width: 30px;
+        height: 30px;   
+    }
+
+    &--link
+    {
+        display: flex;
+        text-decoration: none;
+
+        &-instagram
+        {
+            :hover
+            {
+                fill: #ee2a7b;
+                transition: .25s;
+            }
+        }
+        &-github
+        {
+            :hover
+            {
+                fill: white;
+                transition: .25s;
+            }
+        }
+        &-linkedin
+        {
+            :hover
+            {
+                fill: #0e76a8;
+                transition: .25s;
+            }
+        }
+    }
+
+    &--icon
+    {
+        
+        fill: $color-default;
+    }
+}
+
+//Hamburger Menu
+
+.hamburger__menu
+{
+    position: fixed;
+    top: $nav-height;
+    height: 100%;
+    width: 100vw;
+    z-index: 6;
+
+    overflow: hidden;
+
+    border-top: $color-red 1px solid;
+
+    backdrop-filter: blur(2.5px);
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.hamburger__content
+{
+    display: grid;
+    grid-template-areas: 
+    "hamburger_links"
+    "hamburger_socials";
+    grid-template-rows: 2fr 1fr;
+    width: 100%;
+    height: 100vh;
+}
+
+//Links
+
+.hamburger__links
+{
+    grid-area: hamburger_links;
+
+    width: fit-content;
+    height: fit-content;
+    margin: 15px 0px;
+
+    &--list
+    {
+        display: flex;
+        flex-direction: column;
+        gap : .5em;
+        list-style: none;
+    }
+
+    &--item
+    {
+        width: fit-content;
+        height: fit-content;  
+        
+        :hover
+        {
+            color: $color-red;
+            transition: .15s;
+        }
+    }
+}
+
+.hamburger__button
+{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 15px;
+    
+    &--link
+    {
+        width: fit-content;
+        height: fit-content;
+
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+
+        align-items: center;
+    
+        &-text
+        {
+            position: absolute;
+            margin-left: 15px;
+            font-family: Inconsolata;
+            font-size: 1.75rem;
+            text-decoration: none;
+            text-align: center;
+            color: $color-yellow;
+        }
+
+        &-current
+        {
+            color: $color-cyan;
+        }
+    }
+
+    &--image
+    {
+        height: 45px;
+        width: 20px;
+
+        &-center
+        {  
+            width: 22.5px;
+        }
+
+        &-padding
+        {
+            width: 10px;
+        }
+
+    }
+
+
+}
+
+//Socials
+
+.hamburger__socials
+{
+    grid-area: hamburger_socials;
+    justify-self: center;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 15px;
+
+    &--list
+    {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    &--item
+    {
+        width: 30px;
+        height: 30px; 
+    }
+
+    &--link
+    {
+        display: flex;
+
+        &-instagram
+        {
+            :hover
+            {
+                fill: #ee2a7b;
+                transition: .25s;
+            }
+        }
+        &-github
+        {
+            :hover
+            {
+                fill: white;
+                transition: .25s;
+            }
+        }
+        &-linkedin
+        {
+            :hover
+            {
+                fill: #0e76a8;
+                transition: .25s;
+            }
+        }
+    }
+
+    &--icon
+    {
+        fill: $color-default;
+    }
+}
+
+/* #endregion */

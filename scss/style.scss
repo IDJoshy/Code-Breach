@@ -1,0 +1,12 @@
+
+//Base
+@import "./base/_vars.scss";
+@import "./base/_reset.scss";
+
+//Components
+@import "./components/_navbar.scss";
+@import "./components/_footer.scss";
+
+//Layout
+@import "./layout/_index.scss";
+@import "./layout/_queries.scss";

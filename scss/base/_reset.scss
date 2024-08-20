@@ -1,0 +1,33 @@
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+html
+{
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+div
+{
+    display: block;
+    unicode-bidi: isolate
+}
+
+body
+{
+    font-family: Inconsolata, "Ubuntu Mono", monospace;
+    background-color: $color-shadow;
+    color: $color-default;
+    overflow-x: hidden;
+}
+
+a
+{
+    text-decoration: none;
+}
