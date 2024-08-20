@@ -331,6 +331,45 @@ a {
 }
 
 /* #endregion */
+/* #region Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader__content {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+.loader__content--image {
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transition: opacity 0.1s ease;
+}
+.loader__content--image-active {
+  opacity: 1;
+}
+
+/* #endregion */
 /* #region Media queries */
 @media screen and (max-height: 425px) {
   .hamburger__content {

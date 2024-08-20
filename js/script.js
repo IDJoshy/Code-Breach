@@ -1,3 +1,25 @@
+// Loader
+
+window.addEventListener("load", () =>
+{
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");
+});
+
+const loader_images = document.querySelectorAll('.loader__content--image');
+
+let loader_images_index = 0;
+const loader_images_time = 250;
+
+function loader_images_animation() {
+    loader_images[loader_images_index].classList.remove('loader__content--image-active');
+    loader_images_index = (loader_images_index + 1) % loader_images.length;
+    loader_images[loader_images_index].classList.add('loader__content--image-active');
+}
+
+setInterval(loader_images_animation, loader_images_time);
+
 // Hamburger Menu
 
 const hamburger__menu = document.querySelector(".hamburger__menu");
