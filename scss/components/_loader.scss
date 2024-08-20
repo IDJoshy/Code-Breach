@@ -11,7 +11,7 @@
 
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, .5);
-    transition: opacity .75s, visibility .75s;
+    transition: opacity 1.5s, visibility 1.5s;
 
     &--hidden
     {
@@ -29,8 +29,8 @@
     align-items: center;
 
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 50px;
+    right: 50px;
 
     &--image
     {
@@ -38,8 +38,6 @@
         width: 30px;
         height: 30px;
         position: absolute;
-
-        transition: opacity 0.1s ease;
 
         &-active
         {
