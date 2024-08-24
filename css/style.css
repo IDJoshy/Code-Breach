@@ -33,26 +33,6 @@
   border-bottom: #e11900 1px solid;
 }
 
-.container--grid-row {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  max-height: 100%;
-  width: 100%;
-  border-bottom: #e11900 1px solid;
-}
-
-.container--grid-column {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  max-height: 100%;
-  width: 100%;
-  border-bottom: #e11900 1px solid;
-}
-
 .hero--container {
   display: flex;
   flex-direction: column;
@@ -508,6 +488,38 @@ a {
   background-position: right;
 }
 
+.feature--card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 275px;
+  padding: 5px;
+  row-gap: 2rem;
+}
+.feature--card-container {
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+}
+.feature--card-image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+}
+.feature--card-header {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1.15em;
+  text-align: center;
+  color: #4ff0f8;
+}
+.feature--card-explanation {
+  font-size: 1em;
+  text-align: center;
+  color: #c6d4d4;
+}
+
 /*#endregion*/
 /* Index.html */
 .index--hero {
@@ -558,6 +570,24 @@ a {
   font-weight: 900;
   text-align: center;
   color: #e9bc29;
+}
+.index--feature {
+  padding: 7.5rem 10px;
+  row-gap: 7.5vh;
+}
+.index--feature-header {
+  font-family: Inconsolata;
+  font-size: 1.25em;
+  font-weight: 900;
+  text-align: center;
+  color: #e9bc29;
+}
+.index--feature-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 2.5rem;
+  align-content: center;
 }
 
 /* #region Media queries */

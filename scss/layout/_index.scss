@@ -65,4 +65,31 @@
         }
     }
 
+
+    &--feature
+    {
+        padding: 7.5rem 10px;
+        row-gap: 7.5vh;
+
+
+        &-header
+        {
+            font-family: Inconsolata;
+            font-size: 1.25em;
+            font-weight: 900;
+            text-align: center;
+            color: $color-yellow;
+        }
+
+        &-columns
+        {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            row-gap: 2.5rem;
+            align-content: center;
+        }
+
+    }
+
 }

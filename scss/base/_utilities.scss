@@ -15,19 +15,6 @@
     border-bottom: $color-red 1px solid;
 }
 
-@mixin container-grid($align-items, $justify-content)
-{
-    display: grid;
-    align-items: $align-items;
-    justify-content: $justify-content;
-    
-    min-height: 100vh;
-    max-height: 100%;
-    width: 100%;
-    
-    border-bottom: $color-red 1px solid;
-}
-
 @mixin display-centered($display-type)
 {
     display: $display-type;
@@ -117,16 +104,6 @@
 .container--flex-column
 {
     @include container-flex(column, center, center);
-}
-
-//Container Grid
-.container--grid-row
-{
-    @include container-grid(center, center);
-}
-.container--grid-column
-{
-    @include container-grid(center, center);
 }
 
 //Hero
