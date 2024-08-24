@@ -1,0 +1,68 @@
+/* Index.html */
+
+.index
+{
+
+    &--hero
+    {
+        gap: 7.5vh;
+        padding-top: 0;
+        border-bottom: none;
+
+        &-pretitle
+        {
+            font-family: Inconsolata;
+            font-size: 1em;
+            text-align: center;
+            padding: 0px 10px;
+            color: #aaf9fa;
+        }
+
+        &-title
+        {
+            font-family: Inconsolata;
+            font-size: 2.25em;
+            font-weight: 900;
+            text-align: center;
+            text-shadow: red -1px 0,
+                        cyan 1px 0;
+        }
+
+        &-link
+        {
+            @include display-centered(inline-flex);
+            text-align: center;
+            
+            background: rgba(0, 0, 0, .3);
+            cursor: pointer;
+            
+            border-top: .125rem solid $color-red;
+            border-bottom: .125rem solid $color-red;
+    
+            font-size: 1em;
+            color: $color-red;
+            text-transform: uppercase;
+            width: 125px;
+            height: 50px;
+        }
+    }
+
+
+    &--news
+    {
+        @include display-centered(flex);
+        height: 75px;
+        width: 100%;
+        background-color: black;
+
+        &-header
+        {
+            font-family: Inconsolata;
+            font-size: 0.9em;
+            font-weight: 900;
+            text-align: center;
+            color: $color-yellow;
+        }
+    }
+
+}

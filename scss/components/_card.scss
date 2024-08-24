@@ -1,0 +1,33 @@
+/*#region card*/
+
+@mixin card-container()
+{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 275px;
+    overflow: hidden;  
+    border-radius: 15px;
+
+    background-image: $card-bg-gradient; 
+    border: $color-default solid 1px;      
+
+    background-size: 250%;
+    background-position: left;
+
+    transition: background-position .25s ease-out;
+
+}
+
+.card
+{
+    @include card-container();
+
+    &:hover,
+    &:focus
+    {
+        background-position: right;
+    }
+}
+
+/*#endregion*/

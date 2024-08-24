@@ -1,0 +1,190 @@
+/* #region container */
+
+@mixin container-flex($flex-direction, $align-items, $justify-content)
+{
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    
+    min-height: 100vh;
+    max-height: 100%;
+    width: 100%;
+
+    padding-top: $nav-height;
+    border-bottom: $color-red 1px solid;
+}
+
+@mixin container-grid($align-items, $justify-content)
+{
+    display: grid;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    
+    min-height: 100vh;
+    max-height: 100%;
+    width: 100%;
+    
+    border-bottom: $color-red 1px solid;
+}
+
+@mixin display-centered($display-type)
+{
+    display: $display-type;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #endregion */
+
+//Backgrounds
+
+@mixin bg-grid($grid-bg-color)
+{
+    background-size: 40px 40px;
+
+    @if ($grid-bg-color == green)
+    {
+        background-image: 
+        linear-gradient(to right, $bg-color-green 1px, transparent 1px),
+        linear-gradient(to bottom, $bg-color-green 1px, transparent 1px);
+    }
+    @else if ($grid-bg-color == yellow)
+    {
+        background-image: 
+        linear-gradient(to right, $bg-color-yellow 1px, transparent 1px),
+        linear-gradient(to bottom, $bg-color-yellow 1px, transparent 1px);
+    }
+    @else if ($grid-bg-color == red)
+    {
+        background-image: 
+        linear-gradient(to right, $bg-color-red 1px, transparent 1px),
+        linear-gradient(to bottom, $bg-color-red 1px, transparent 1px);
+    }
+    @else if ($grid-bg-color == blue)
+    {
+        background-image: 
+        linear-gradient(to right, $bg-color-blue 1px, transparent 1px),
+        linear-gradient(to bottom, $bg-color-blue 1px, transparent 1px);
+    } 
+    @else
+    {
+        background-image: none;
+    }
+}
+
+@mixin bg-gradient($gradient-bg-color)
+{
+    @if($gradient-bg-color == dark)
+    {
+        background-image: $bg-gradient-dark;
+    }
+    @else if($gradient-bg-color == light)
+    {
+        background-image: $bg-gradient-light;
+    }
+    @else
+    {
+        background-image: none;
+    }
+
+    background-size: 250%;
+    background-position: left;
+
+    animation: bg-gradient-anim 10s infinite alternate;
+}
+
+@keyframes bg-gradient-anim
+{
+    0% 
+    {
+        background-position: left;
+    }
+    100% 
+    {
+        background-position: right;
+    }
+}
+
+/* #region Prefabs*/
+
+//Container Flex
+.container--flex-row
+{
+    @include container-flex(row, center, center);
+}
+
+.container--flex-column
+{
+    @include container-flex(column, center, center);
+}
+
+//Container Grid
+.container--grid-row
+{
+    @include container-grid(center, center);
+}
+.container--grid-column
+{
+    @include container-grid(center, center);
+}
+
+//Hero
+
+.hero
+{
+    &--container
+    {
+        @include container-flex(column, center, center);
+        overflow: hidden;
+        gap: 2.5vh;
+    }
+
+    &--background
+    {        
+        position: absolute;
+        filter: brightness(.75);
+        height: 100vh;
+        width: 100%;
+        z-index: -5;
+    
+        &-video
+        {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+}
+
+//Background Grids
+.bg--grid-red
+{
+    @include bg-grid(red);
+}
+.bg--grid-green
+{
+    @include bg-grid(green);
+}
+.bg--grid-blue
+{
+    @include bg-grid(blue);
+}
+.bg--grid-yellow
+{
+    @include bg-grid(yellow);
+}
+
+//Background Gradient
+
+.bg--gradient-dark
+{
+    @include bg-gradient(dark);
+}
+.bg--gradient-light
+{
+    @include bg-gradient(light);
+}
+
+/* #endregion */

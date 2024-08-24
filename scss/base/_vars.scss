@@ -6,6 +6,22 @@ $color-red: #e11900;
 $color-shadow: #181818;
 $color-cyan: #4ff0f8;
 
+//Background Colors (Container)
+
+//Grid color
+$bg-color-green: #00e1161d;
+$bg-color-yellow: #e1c3001d;
+$bg-color-red: #e11a001d;
+$bg-color-blue: #004be11d;
+//Gradient
+$bg-gradient-dark: linear-gradient(45deg, $color-shadow, #202020, #242424);
+$bg-gradient-light: linear-gradient(45deg, #9eabab, #b0bcbc, $color-default);
+
+
+
+//Card
+$card-bg-gradient: linear-gradient(90deg, #614385, #516395, #67abbc);
+
 
 //Breakpoints Horizontal
 $mobile-md-h-breakpoint: 375px;
@@ -15,5 +31,6 @@ $desktop-sm-h-breakpoint: 1024px;
 $desktop-md-h-breakpoint: 1440px;
 $desktop-lg-h-breakpoint: 2560px;
 
-//navbar
+//Navbar
 $nav-height: 4.75rem;
+
