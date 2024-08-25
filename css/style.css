@@ -687,6 +687,7 @@ a {
   gap: 6vh;
   text-align: center;
   justify-content: flex-start;
+  overflow-x: hidden;
 }
 .index--road-header {
   font-family: Inconsolata;
@@ -795,11 +796,11 @@ a {
 }
 .road--card-header {
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1.2em;
   color: #7de2d2;
 }
 .road--card-explanation {
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: center;
   color: white;
 }

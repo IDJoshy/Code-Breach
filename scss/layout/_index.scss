@@ -96,6 +96,8 @@
         text-align: center;
         justify-content: flex-start;
 
+        overflow-x: hidden;
+
         &-header
         {
             font-family: Inconsolata;
@@ -239,13 +241,13 @@
     &-header
     {
         text-align: center;
-        font-size: 1.25em;
+        font-size: 1.2em;
         color: #7de2d2;
     }
 
     &-explanation
     {
-        font-size: 1.1em;
+        font-size: 1em;
         text-align: center;
         color: white;
     }
