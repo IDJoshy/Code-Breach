@@ -2,7 +2,6 @@
 
 .index
 {
-
     &--hero
     {
         gap: 7.5vh;
@@ -47,7 +46,6 @@
         }
     }
 
-
     &--news
     {
         @include display-centered(flex);
@@ -65,12 +63,11 @@
         }
     }
 
-
     &--feature
     {
         padding: 7.5rem 10px;
         row-gap: 7.5vh;
-
+        justify-content: flex-start;
 
         &-header
         {
@@ -90,6 +87,59 @@
             align-content: center;
         }
 
+    }
+
+    &--road
+    {
+        padding: 7.5rem 10px 2rem 10px;
+        gap: 6vh;
+        text-align: center;
+        justify-content: flex-start;
+
+        &-header
+        {
+            font-family: Inconsolata;
+            font-size: 2em;
+            font-weight: 900;
+            color: $color-yellow;
+        }
+
+        &-subheader
+        {
+            font-family: "Ubuntu Mono", monospace;
+            font-size: 1em;
+            color: $color-default;
+        }
+    }
+
+    &--requirements
+    {
+        padding: 7.5rem 10px 2rem 10px;
+        gap: 7.5vh;
+        text-align: center;
+        justify-content: flex-start;
+
+        &-header
+        {
+            font-family: Inconsolata;
+            font-size: 1.5em;
+            font-weight: 900;
+            color: $color-yellow;
+        }
+
+        &-subheader
+        {
+            font-family: "Ubuntu Mono", monospace;
+            font-size: 1em;
+            color: $color-default;
+        }
+
+        &-status
+        {
+            font-family: "Ubuntu Mono", monospace;
+            font-size: 1.5em;
+            color: $color-red;
+        }
     }
 
 }

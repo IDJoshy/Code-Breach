@@ -1,0 +1,103 @@
+/* #region Contact */
+
+.contact
+{
+    padding: 7.5rem 10px 5rem 10px;
+    row-gap: 8vh;
+    justify-content: flex-start;
+
+    &--header
+    {
+        font-family: Inconsolata;
+        font-size: 2em;
+        font-weight: 900;
+        color: $color-yellow;
+    }
+
+    &--container
+    {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    &--form
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5rem;
+    }
+
+    &--input
+    {
+        font-family: "Ubuntu Mono";
+        font-size: medium;
+        width: 75vw;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        padding: 0 10px;
+        cursor: text;
+
+        background-color: $color-default;
+
+        @include bg-grid(green);
+        background-size: 15px 15px;
+
+        &-message
+        {
+            height: 175px;
+            padding-top: 15px;
+            resize: none;
+        }
+
+        &::placeholder
+        {
+            color: #000000;
+        }
+
+        &:focus
+        {
+            outline: green 2px solid;
+        }
+    }
+
+    &--button
+    {
+        font-family: "Ubuntu Mono";
+        font-size: medium;
+        color: $color-default;
+        border: none;
+        @include display-centered(flex);
+        gap: 5px;
+        cursor: pointer;
+        background: none;
+
+        --s: 10px; /* the size on the corner */
+        --t: 2px;  /* the thickness of the border */
+        --g: 10px; /* the gap between the border and image */
+        
+        padding: calc(var(--g) + var(--t));
+        outline: var(--t) solid #ffffff; /* the color here */
+        outline-offset: calc(-1 * var(--t));
+        mask:
+          conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+          0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+          linear-gradient(#000 0 0) content-box;
+        transition: .4s;
+
+        &:hover
+        :focus
+        {
+            outline-offset: calc(var(--g)/-1.5);
+        }
+
+        &-icon
+        {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+/* #endregion */

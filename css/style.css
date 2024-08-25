@@ -80,17 +80,17 @@
 }
 
 .bg--gradient-dark {
-  background-image: linear-gradient(45deg, #181818, #202020, #242424);
+  background-image: linear-gradient(45deg, #181818, #242424, #303030);
   background-size: 250%;
   background-position: left;
-  animation: bg-gradient-anim 10s infinite alternate;
+  animation: bg-gradient-anim 5s infinite alternate;
 }
 
 .bg--gradient-light {
-  background-image: linear-gradient(45deg, #9eabab, #b0bcbc, #c6d4d4);
+  background-image: linear-gradient(45deg, #572ea9, #7459a9, #bdb1d5);
   background-size: 250%;
   background-position: left;
-  animation: bg-gradient-anim 10s infinite alternate;
+  animation: bg-gradient-anim 5s infinite alternate;
 }
 
 /* #endregion */
@@ -381,6 +381,82 @@ a {
 }
 
 /* #endregion */
+/* #region Contact */
+.contact {
+  padding: 7.5rem 10px 5rem 10px;
+  row-gap: 8vh;
+  justify-content: flex-start;
+}
+.contact--header {
+  font-family: Inconsolata;
+  font-size: 2em;
+  font-weight: 900;
+  color: #e9bc29;
+}
+.contact--container {
+  width: fit-content;
+  height: fit-content;
+}
+.contact--form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+}
+.contact--input {
+  font-family: "Ubuntu Mono";
+  font-size: medium;
+  width: 75vw;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  cursor: text;
+  background-color: #c6d4d4;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(0, 225, 22, 0.1137254902) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 225, 22, 0.1137254902) 1px, transparent 1px);
+  background-size: 15px 15px;
+}
+.contact--input-message {
+  height: 175px;
+  padding-top: 15px;
+  resize: none;
+}
+.contact--input::placeholder {
+  color: #000000;
+}
+.contact--input:focus {
+  outline: green 2px solid;
+}
+.contact--button {
+  font-family: "Ubuntu Mono";
+  font-size: medium;
+  color: #c6d4d4;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  --s: 10px; /* the size on the corner */
+  --t: 2px; /* the thickness of the border */
+  --g: 10px; /* the gap between the border and image */
+  padding: calc(var(--g) + var(--t));
+  outline: var(--t) solid #ffffff; /* the color here */
+  outline-offset: calc(-1 * var(--t));
+  mask: conic-gradient(at var(--s) var(--s), rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s)), linear-gradient(#000 0 0) content-box;
+  transition: 0.4s;
+}
+.contact--button:hover :focus {
+  outline-offset: calc(var(--g) / -1.5);
+}
+.contact--button-icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* #endregion */
 /* #region Footer */
 .footer__content {
   display: flex;
@@ -574,6 +650,7 @@ a {
 .index--feature {
   padding: 7.5rem 10px;
   row-gap: 7.5vh;
+  justify-content: flex-start;
 }
 .index--feature-header {
   font-family: Inconsolata;
@@ -588,6 +665,45 @@ a {
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 2.5rem;
   align-content: center;
+}
+.index--road {
+  padding: 7.5rem 10px 2rem 10px;
+  gap: 6vh;
+  text-align: center;
+  justify-content: flex-start;
+}
+.index--road-header {
+  font-family: Inconsolata;
+  font-size: 2em;
+  font-weight: 900;
+  color: #e9bc29;
+}
+.index--road-subheader {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1em;
+  color: #c6d4d4;
+}
+.index--requirements {
+  padding: 7.5rem 10px 2rem 10px;
+  gap: 7.5vh;
+  text-align: center;
+  justify-content: flex-start;
+}
+.index--requirements-header {
+  font-family: Inconsolata;
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #e9bc29;
+}
+.index--requirements-subheader {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1em;
+  color: #c6d4d4;
+}
+.index--requirements-status {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 1.5em;
+  color: #e11900;
 }
 
 /* #region Media queries */
