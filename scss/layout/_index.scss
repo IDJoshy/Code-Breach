@@ -40,7 +40,7 @@
     
             font-size: 1em;
             color: $color-red;
-            text-transform: uppercase;
+            text-transroad: uppercase;
             width: 125px;
             height: 50px;
         }
@@ -91,7 +91,7 @@
 
     &--road
     {
-        padding: 7.5rem 10px 2rem 10px;
+        padding: 7.5rem 10px 5rem 10px;
         gap: 6vh;
         text-align: center;
         justify-content: flex-start;
@@ -109,6 +109,15 @@
             font-family: "Ubuntu Mono", monospace;
             font-size: 1em;
             color: $color-default;
+        }
+
+        &-column
+        {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            row-gap: 5vh;
         }
     }
 
@@ -180,5 +189,80 @@
         font-size: 1em;
         text-align: center;
         color: $color-default;
+    }
+}
+
+.road--card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 280px;
+    row-gap: 2rem;
+
+    &-container
+    {
+        width: 175px;
+        height: 175px;
+        background-color: black;
+        transition: .5s ease-in-out;
+
+        $road-corner-size: 10px; /* the size on the corner */
+        $road-corner-thickness: 1px;  /* the thickness of the border */
+        $road-corner-gap: 10px; /* the gap between the border and image */
+        
+        padding: calc($road-corner-gap + $road-corner-thickness);
+        outline: $road-corner-thickness solid #ffffff; /* the color here */
+        outline-offset: calc(-1 * $road-corner-thickness);
+        mask:
+          conic-gradient(at $road-corner-size $road-corner-size,#0000 75%,#000 0)
+          0 0/calc(100% - $road-corner-size) calc(100% - $road-corner-size),
+          linear-gradient(#000 0 0) content-box;
+        transition: .4s;
+
+        &:hover,
+        :focus
+        {
+            outline-offset: calc($road-corner-gap/-1);
+        }
+    }
+
+    &-icon
+    {
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+        pointer-events: none;
+    }
+
+    &-header
+    {
+        text-align: center;
+        font-size: 1.25em;
+        color: #7de2d2;
+    }
+
+    &-explanation
+    {
+        font-size: 1.1em;
+        text-align: center;
+        color: white;
+    }
+
+    &-done
+    {
+        &:hover
+        {
+            background-color: darken($color-cyan, 30%);
+        }
+    }
+
+    &-undone
+    {
+        &:hover
+        {
+            background-color: $color-red;
+        }
     }
 }

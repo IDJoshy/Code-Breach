@@ -73,23 +73,23 @@
         cursor: pointer;
         background: none;
 
-        --s: 10px; /* the size on the corner */
-        --t: 2px;  /* the thickness of the border */
-        --g: 10px; /* the gap between the border and image */
+        $form-corner-size: 10px; /* the size on the corner */
+        $form-corner-thickness: 2px;  /* the thickness of the border */
+        $form-corner-gap: 10px; /* the gap between the border and image */
         
-        padding: calc(var(--g) + var(--t));
-        outline: var(--t) solid #ffffff; /* the color here */
-        outline-offset: calc(-1 * var(--t));
+        padding: calc($form-corner-gap + $form-corner-thickness);
+        outline: $form-corner-thickness solid #ffffff; /* the color here */
+        outline-offset: calc(-1 * $form-corner-thickness);
         mask:
-          conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
-          0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+          conic-gradient(at $form-corner-size $form-corner-size,#0000 75%,#000 0)
+          0 0/calc(100% - $form-corner-size) calc(100% - $form-corner-size),
           linear-gradient(#000 0 0) content-box;
         transition: .4s;
 
         &:hover,
         :focus
         {
-            outline-offset: calc(var(--g)/-1.5);
+            outline-offset: calc($form-corner-gap/-1.5);
         }
     }
 
