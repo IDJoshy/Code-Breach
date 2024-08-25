@@ -1,5 +1,7 @@
 // Loader
 
+const mail = document.querySelector(".mail");
+
 window.addEventListener("load", () =>
 {
     const loader = document.querySelector(".loader");
@@ -8,6 +10,7 @@ window.addEventListener("load", () =>
 
     loader.addEventListener("transitionend", () =>
     {
+        mail.classList.remove("mail--hidden");
         loader.remove();
     })
 })
