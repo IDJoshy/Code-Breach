@@ -772,16 +772,14 @@ a {
 .road--card-container {
   width: 175px;
   height: 175px;
-  background-color: black;
-  transition: 0.5s ease-in-out;
   /* the size on the corner */
   /* the thickness of the border */
   /* the gap between the border and image */
-  padding: 11px;
-  outline: 1px solid #ffffff; /* the color here */
-  outline-offset: -1px;
+  padding: 12px;
+  outline: 2px solid #ffffff; /* the color here */
+  outline-offset: -2px;
   mask: conic-gradient(at 10px 10px, rgba(0, 0, 0, 0) 75%, #000 0) 0 0/calc(100% - 10px) calc(100% - 10px), linear-gradient(#000 0 0) content-box;
-  transition: 0.4s;
+  transition: 0.25s;
 }
 .road--card-container:hover,
 .road--card-container :focus {
@@ -792,6 +790,8 @@ a {
   height: 100%;
   border: 1px solid white;
   pointer-events: none;
+  background-color: black;
+  transition: 0.5s ease-in-out;
 }
 .road--card-header {
   text-align: center;
@@ -803,10 +803,10 @@ a {
   text-align: center;
   color: white;
 }
-.road--card-done:hover {
+.road--card-done:hover .road--card-icon {
   background-color: #07a0a7;
 }
-.road--card-undone:hover {
+.road--card-undone:hover .road--card-icon {
   background-color: #e11900;
 }
 
