@@ -4,6 +4,7 @@
 {
     &--hero
     {
+        @include hero(column, center, center);
         gap: 7.5vh;
         padding-top: 0;
         border-bottom: none;
@@ -108,8 +109,9 @@
 
         &-subheader
         {
-            font-family: "Ubuntu Mono", monospace;
-            font-size: 1em;
+            font-family: "Terminus (TTF)", monospace;
+            font-weight: 500;
+            font-size: 1.15em;
             color: $color-default;
         }
 
@@ -140,14 +142,16 @@
 
         &-subheader
         {
-            font-family: "Ubuntu Mono", monospace;
+            font-family: "Terminus (TTF)", monospace;
+            font-weight: 500;
             font-size: 1em;
             color: $color-default;
         }
 
         &-status
         {
-            font-family: "Ubuntu Mono", monospace;
+            font-family: "Terminus (TTF)", monospace;
+            font-weight: 500;
             font-size: 1.5em;
             color: $color-red;
         }
@@ -180,7 +184,7 @@
 
     &-header
     {
-        font-family: "Ubuntu Mono", monospace;
+        font-family: "Terminus (TTF)", monospace;
         font-size: 1.15em;
         text-align: center;
         color: $color-cyan;
@@ -240,6 +244,7 @@
 
     &-header
     {
+        font-family: "Terminus (TTF)", monospace;
         text-align: center;
         font-size: 1.2em;
         color: #7de2d2;

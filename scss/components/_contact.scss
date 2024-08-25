@@ -30,7 +30,7 @@
 
     &--input
     {
-        font-family: "Ubuntu Mono";
+        font-family: Inconsolata;
         font-size: medium;
         width: 75vw;
         height: 50px;
@@ -53,7 +53,7 @@
 
         &::placeholder
         {
-            color: #000000;
+            color: $color-shadow;
         }
 
         &:focus
@@ -64,7 +64,9 @@
 
     &--button
     {
-        font-family: "Ubuntu Mono";
+        font-family: "Terminus (TTF)";
+        font-weight: 100;
+        font-style: normal;
         font-size: medium;
         color: $color-default;
         border: none;

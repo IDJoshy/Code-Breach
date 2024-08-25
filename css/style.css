@@ -33,32 +33,6 @@
   border-bottom: #e11900 1px solid;
 }
 
-.hero--container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  max-height: 100%;
-  width: 100%;
-  padding-top: 4.75rem;
-  border-bottom: #e11900 1px solid;
-  overflow: hidden;
-  gap: 2.5vh;
-}
-.hero--background {
-  position: absolute;
-  filter: brightness(0.75);
-  height: 100vh;
-  width: 100%;
-  z-index: -5;
-}
-.hero--background-video {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
 .bg--grid-red {
   background-size: 40px 40px;
   background-image: linear-gradient(to right, rgba(225, 26, 0, 0.1137254902) 1px, transparent 1px), linear-gradient(to bottom, rgba(225, 26, 0, 0.1137254902) 1px, transparent 1px);
@@ -111,8 +85,12 @@ div {
   unicode-bidi: isolate;
 }
 
+@font-face {
+  font-family: "Terminus (TTF)";
+  src: url(../media/fonts/Terminus.ttf) format("truetype");
+}
 body {
-  font-family: Inconsolata, "Ubuntu Mono", monospace;
+  font-family: Inconsolata, "Terminus (TTF)";
   background-color: #181818;
   color: #c6d4d4;
   overflow-x: hidden;
@@ -120,6 +98,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+:root {
+  --page-title-length: 0;
 }
 
 /* #region navbar */
@@ -381,6 +363,99 @@ a {
 }
 
 /* #endregion */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  max-height: fit-content;
+  width: 100%;
+  padding-top: 0;
+  overflow: hidden;
+}
+.hero--background {
+  position: absolute;
+  filter: brightness(0.75);
+  height: 100vh;
+  width: 100%;
+  z-index: -5;
+}
+.hero--background-video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.hero--content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  width: 100%;
+  height: fit-content;
+  padding-left: 15px;
+}
+.hero--content-header {
+  font-family: "Terminus (TTF)";
+  font-size: 2.75em;
+  font-weight: 700;
+  color: #e9bc29;
+}
+.hero--content-subheader {
+  font-family: Inconsolata;
+  font-size: 1em;
+  font-style: italic;
+  color: #c6d4d4;
+}
+.hero--content::after {
+  border: none;
+  content: "";
+  width: 250px;
+  height: 5px;
+  background-color: #e9bc29;
+}
+.hero--current {
+  margin-top: calc(4.75rem + 5vh);
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+}
+.hero--current-game {
+  --page-title-length: 12;
+}
+.hero--current-shop {
+  --page-title-length: 8;
+}
+.hero--current-media {
+  --page-title-length: 9;
+}
+.hero--current-about {
+  --page-title-length: 8;
+}
+.hero--current-text {
+  font-family: "Terminus (TTF)";
+  font-size: 1em;
+  font-weight: 50;
+  white-space: nowrap;
+  text-transform: uppercase;
+  overflow: hidden;
+  width: 100%;
+  color: #4ff0f8;
+  border-right: 2px solid;
+  animation: typing 0.3s steps(var(--page-title-length)), blink 0.4s step-end infinite alternate;
+}
+
+/* cursor blink */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* typing */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
 /* #region Contact */
 .contact {
   padding: 7.5rem 10px 5rem 10px;
@@ -404,7 +479,7 @@ a {
   gap: 1.5rem;
 }
 .contact--input {
-  font-family: "Ubuntu Mono";
+  font-family: Inconsolata;
   font-size: medium;
   width: 75vw;
   height: 50px;
@@ -423,13 +498,15 @@ a {
   resize: none;
 }
 .contact--input::placeholder {
-  color: #000000;
+  color: #181818;
 }
 .contact--input:focus {
   outline: green 2px solid;
 }
 .contact--button {
-  font-family: "Ubuntu Mono";
+  font-family: "Terminus (TTF)";
+  font-weight: 100;
+  font-style: normal;
   font-size: medium;
   color: #c6d4d4;
   border: none;
@@ -532,7 +609,8 @@ a {
 }
 
 .footer__links--link {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Terminus (TTF)", monospace;
+  font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
   text-align: center;
@@ -615,6 +693,13 @@ a {
 /*#endregion*/
 /* Index.html */
 .index--hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-height: fit-content;
+  width: 100%;
   gap: 7.5vh;
   padding-top: 0;
   border-bottom: none;
@@ -696,8 +781,9 @@ a {
   color: #e9bc29;
 }
 .index--road-subheader {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 1em;
+  font-family: "Terminus (TTF)", monospace;
+  font-weight: 500;
+  font-size: 1.15em;
   color: #c6d4d4;
 }
 .index--road-column {
@@ -720,12 +806,14 @@ a {
   color: #e9bc29;
 }
 .index--requirements-subheader {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Terminus (TTF)", monospace;
+  font-weight: 500;
   font-size: 1em;
   color: #c6d4d4;
 }
 .index--requirements-status {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Terminus (TTF)", monospace;
+  font-weight: 500;
   font-size: 1.5em;
   color: #e11900;
 }
@@ -751,7 +839,7 @@ a {
   border: 1px solid white;
 }
 .feature--card-header {
-  font-family: "Ubuntu Mono", monospace;
+  font-family: "Terminus (TTF)", monospace;
   font-size: 1.15em;
   text-align: center;
   color: #4ff0f8;
@@ -795,6 +883,7 @@ a {
   transition: 0.5s ease-in-out;
 }
 .road--card-header {
+  font-family: "Terminus (TTF)", monospace;
   text-align: center;
   font-size: 1.2em;
   color: #7de2d2;

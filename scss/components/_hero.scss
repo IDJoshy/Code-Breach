@@ -1,0 +1,114 @@
+//Hero
+
+.hero
+{
+    @include hero(column, flex-start, flex-start);
+    padding-top: 0;
+    overflow: hidden;
+
+
+    &--background
+    {        
+        position: absolute;
+        filter: brightness(.75);
+        height: 100vh;
+        width: 100%;
+        z-index: -5;
+    
+        &-video
+        {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &--content
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5vh;
+        width: 100%;
+        height: fit-content;
+        padding-left: 15px;
+
+        &-header
+        {
+            font-family: "Terminus (TTF)";
+            font-size: 2.75em;
+            font-weight: 700;
+            color: $color-yellow;
+        }
+
+        &-subheader
+        {
+            font-family: Inconsolata;
+            font-size: 1em;
+            font-style: italic;
+            color: $color-default;
+        }
+
+        &::after
+        {
+            border: none;
+            content: "";
+            width: 250px;
+            height: 5px;
+            background-color: $color-yellow;
+        }
+    }
+
+    &--current
+    {
+        margin-top: calc($nav-height + 5vh);
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+
+        &-game
+        {
+            --page-title-length: 12;
+        }
+        &-shop
+        {
+            --page-title-length: 8;
+        }
+        &-media
+        {
+            --page-title-length: 9;
+        }
+        &-about
+        {
+            --page-title-length: 8;
+        }
+
+        &-text
+        {
+            font-family: "Terminus (TTF)";
+            font-size: 1em;
+            font-weight: 50;
+            white-space: nowrap;
+            text-transform: uppercase;
+            overflow: hidden;
+            width: 100%;
+            color: $color-cyan;
+    
+            border-right: 2px solid;
+
+            animation: typing .3s steps(var(--page-title-length)),
+            blink .4s step-end infinite alternate;  
+        }
+    }
+}
+
+/* cursor blink */
+@keyframes blink
+{
+    50% {border-color: transparent}
+}
+
+/* typing */
+@keyframes typing
+{
+    from {width: 0}
+}

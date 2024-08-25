@@ -6,6 +6,7 @@
 
 //Components
 @import "./components/_navbar.scss";
+@import "./components/_hero.scss";
 @import "./components/_contact.scss";
 @import "./components/_footer.scss";
 @import "./components/_loader.scss";
@@ -14,4 +15,8 @@
 
 //Layout
 @import "./layout/_index.scss";
+@import "./layout/_game.scss";
+@import "./layout/_shop.scss";
+@import "./layout/_media.scss";
+@import "./layout/_about.scss";
 @import "./layout/_queries.scss";

@@ -19,9 +19,14 @@ div
     unicode-bidi: isolate
 }
 
+@font-face {
+    font-family: "Terminus (TTF)";
+    src: url(../media/fonts/Terminus.ttf) format("truetype");
+}
+
 body
 {
-    font-family: Inconsolata, "Ubuntu Mono", monospace;
+    font-family: Inconsolata, "Terminus (TTF)";
     background-color: $color-shadow;
     color: $color-default;
     overflow-x: hidden;
@@ -30,4 +35,9 @@ body
 a
 {
     text-decoration: none;
+}
+
+:root
+{
+    --page-title-length: 0;
 }

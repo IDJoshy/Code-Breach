@@ -22,6 +22,18 @@
     align-items: center;
 }
 
+@mixin hero($flex-direction, $align-items, $justify-content)
+{
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+     
+    min-height: 100vh;
+    max-height: fit-content;
+    width: 100%;
+}
+
 /* #endregion */
 
 //Backgrounds
@@ -104,35 +116,6 @@
 .container--flex-column
 {
     @include container-flex(column, center, center);
-}
-
-//Hero
-
-.hero
-{
-    &--container
-    {
-        @include container-flex(column, center, center);
-        overflow: hidden;
-        gap: 2.5vh;
-    }
-
-    &--background
-    {        
-        position: absolute;
-        filter: brightness(.75);
-        height: 100vh;
-        width: 100%;
-        z-index: -5;
-    
-        &-video
-        {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-    }
-
 }
 
 //Background Grids
