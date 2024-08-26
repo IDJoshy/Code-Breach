@@ -67,6 +67,24 @@
   animation: bg-gradient-anim 5s infinite alternate;
 }
 
+@keyframes translate-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes appear-in {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 /* #endregion */
 * {
   padding: 0;
@@ -102,6 +120,7 @@ a {
 
 :root {
   --page-title-length: 0;
+  --page-line-length: 0;
 }
 
 /* #region navbar */
@@ -392,26 +411,30 @@ a {
   gap: 2.5vh;
   width: 100%;
   height: fit-content;
-  padding-left: 15px;
+  padding: 0px 15px;
 }
 .hero--content-header {
   font-family: "Terminus (TTF)";
   font-size: 2.75em;
   font-weight: 700;
   color: #e9bc29;
+  width: fit-content;
 }
 .hero--content-subheader {
   font-family: Inconsolata;
   font-size: 1em;
   font-style: italic;
   color: #c6d4d4;
+  width: fit-content;
 }
 .hero--content::after {
+  --page-line-length: 270px;
   border: none;
   content: "";
-  width: 250px;
+  width: var(--page-line-length);
   height: 5px;
   background-color: #e9bc29;
+  animation: line-stretch 0.5s;
 }
 .hero--current {
   margin-top: calc(4.75rem + 5vh);
@@ -429,7 +452,7 @@ a {
   --page-title-length: 9;
 }
 .hero--current-about {
-  --page-title-length: 8;
+  --page-title-length: 9;
 }
 .hero--current-text {
   font-family: "Terminus (TTF)";
@@ -441,9 +464,25 @@ a {
   width: 100%;
   color: #4ff0f8;
   border-right: 2px solid;
-  animation: typing 0.3s steps(var(--page-title-length)), blink 0.4s step-end infinite alternate;
+  animation: typing 0.5s steps(var(--page-title-length)), blink 0.4s step-end infinite alternate;
+}
+.hero--card {
+  width: 280px;
+  height: 175px;
+  align-self: center;
+}
+.hero--card-hidden {
+  display: none;
 }
 
+@keyframes line-stretch {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--page-line-length);
+  }
+}
 /* cursor blink */
 @keyframes blink {
   50% {
@@ -491,6 +530,9 @@ a {
   background-size: 40px 40px;
   background-image: linear-gradient(to right, rgba(0, 225, 22, 0.1137254902) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 225, 22, 0.1137254902) 1px, transparent 1px);
   background-size: 15px 15px;
+  animation: appear-in linear;
+  animation-timeline: view();
+  animation-range: entry 0%;
 }
 .contact--input-message {
   height: 175px;
@@ -504,8 +546,8 @@ a {
   outline: green 2px solid;
 }
 .contact--button {
-  font-family: "Terminus (TTF)";
-  font-weight: 100;
+  font-family: Inconsolata;
+  font-weight: 300;
   font-style: normal;
   font-size: medium;
   color: #c6d4d4;

@@ -44,6 +44,10 @@
         @include bg-grid(green);
         background-size: 15px 15px;
 
+        animation: appear-in linear;
+        animation-timeline: view();
+        animation-range: entry 0%;
+
         &-message
         {
             height: 175px;
@@ -64,8 +68,8 @@
 
     &--button
     {
-        font-family: "Terminus (TTF)";
-        font-weight: 100;
+        font-family: Inconsolata;
+        font-weight: 300;
         font-style: normal;
         font-size: medium;
         color: $color-default;

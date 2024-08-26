@@ -30,7 +30,7 @@
         gap: 2.5vh;
         width: 100%;
         height: fit-content;
-        padding-left: 15px;
+        padding: 0px 15px;
 
         &-header
         {
@@ -38,6 +38,7 @@
             font-size: 2.75em;
             font-weight: 700;
             color: $color-yellow;
+            width: fit-content;
         }
 
         &-subheader
@@ -46,16 +47,21 @@
             font-size: 1em;
             font-style: italic;
             color: $color-default;
+            width: fit-content;
         }
+
 
         &::after
         {
+            --page-line-length: 270px;
             border: none;
             content: "";
-            width: 250px;
+            width: var(--page-line-length);
             height: 5px;
             background-color: $color-yellow;
+            animation: line-stretch .5s;
         }
+
     }
 
     &--current
@@ -79,7 +85,7 @@
         }
         &-about
         {
-            --page-title-length: 8;
+            --page-title-length: 9;
         }
 
         &-text
@@ -95,9 +101,35 @@
     
             border-right: 2px solid;
 
-            animation: typing .3s steps(var(--page-title-length)),
-            blink .4s step-end infinite alternate;  
+            animation: typing .5s steps(var(--page-title-length)),
+            blink .4s step-end infinite alternate; 
         }
+    }
+
+    &--card
+    {
+        width: 280px;
+        height: 175px;
+        align-self: center;
+
+
+        &-hidden
+        {
+            display: none;
+        }
+    }
+
+}
+
+@keyframes line-stretch
+{
+    from
+    {
+        width: 0;
+    }
+    to
+    {
+        width: var(--page-line-length);
     }
 }
 
