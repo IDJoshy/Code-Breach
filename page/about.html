@@ -288,11 +288,11 @@
     <main class="main">
 
         <!-- Hero -->
-        <div class="hero game--hero">
+        <div class="hero">
 
             <div class="hero--background">
                 <video class="hero--background-video" muted autoplay loop disablePictureInPicture = true>
-                    <source src="../media/video/hero/hero_0.mp4" type="video/mp4"> 
+                    <source src="../media/video/hero/hero_0.webm" type="video/webm"> 
                 </video>
             </div>
 
@@ -321,23 +321,210 @@
 
         <!-- About Me -->
         <div class="container--flex-column bg--grid-violet about">
-            <h2 class="about__header">
-                ABOUT ME
-            </h2>
+
+            <div class="about__header-container">
+                <h2 class="about__header">
+                    &#62; ABOUT ME &#60;
+                </h2>
+            </div>
+
+            <div class="about-me about__content">
+
+                <div class="about-me__image-container">
+                    <img class="about-me__image" src="../media/image/about/introduction.webp" alt="About Me Image">
+                </div>
+
+                <div class="parallax-card about-me__parallax-card" data-value="-1">
+
+                    <div class="parallax-card__effect-container about-me__parallax-effect">
+
+                    </div>
+
+                    <div class="about-me__text-container">
+
+                        <h3 class="about-me__header">
+                            Hi! I'm Joshua Auristondo
+                        </h3>
+    
+                        <p class="about-me__introduction">
+                            <b>Chilean, 21yo, a passionate individual with an explorer mindset, searching for new ways to solve problems.</b> <br><br>
+                            Since i was 13, i always wanted to immerse myself in the programming world, learning the tools necessary to overcome any obstacle in the way.
+                            <br><br>
+                            I started in the Video-Game Building, then in the Desktop App Development, now Web development, and i look forward to learn more. 
+                            <br><br>
+                            I love to apply my knowledge to help me and my peers achieve their goals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
         <!-- Tech Stack -->
-        <div class="container--flex-column bg--grid-blue tech">
-            <h2 class="about__header">
-                TECH STACK
-            </h2>
+        <div class="container--flex-column bg--grid-blue about">
+            <div class="about__header-container">
+                <h2 class="about__header">
+                    &#62; TECH STACK &#60;
+                </h2>
+            </div>
+
+            <div class="tech-stack about__content"> 
+
+                <h3 class="tech-stack__subheader">
+                    I have experience with:
+                </h3>
+
+                <div class="tech-stack__card-container">
+
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/csharp_logo.webp" alt="C# Logo">
+                        </div>
+                        <strong class="card__header">
+                            C# Language
+                        </strong>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/net_logo.webp" alt=".NET Logo">
+                        </div>
+                        <strong class="card__header">
+                            .NET Framework
+                        </strong>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/unity_logo.webp" alt="Unity Engine Logo">
+                        </div>
+                        <strong class="card__header">
+                            Unity Engine &trade;
+                        </strong>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/blender_logo.webp" alt="Blender 3D Logo">
+                        </div>
+                        <strong class="card__header">
+                            Blender &trade;
+                        </strong>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/microsoft-sql-server-logo.webp" alt="Microsoft SQL Server Logo">
+                        </div>
+                        <strong class="card__header">
+                            Microsoft SQL Server Manager &trade;
+                        </strong>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/adobe-substance_logo.webp" alt="Adobe Substance Painter Logo">
+                        </div>
+                        <strong class="card__header">
+                            Adobe Substance Painter &trade;
+                        </strong>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/html_logo.webp" alt="HTML Logo">
+                        </div>
+                        <strong class="card__header">
+                            HTML
+                        </strong>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/css_logo.webp" alt="CSS Logo">
+                        </div>
+                        <strong class="card__header">
+                            CSS
+                        </strong>
+                    </div>
+                    <div class="card">
+                        <div class="card__image-container">
+                            <image class="card__image" src="../media/image/about/github-logo.webp" alt="Github Repository Management Logo">
+                        </div>
+                        <strong class="card__header">
+                            GitHub
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
         <!-- Projects -->
-        <div class="container--flex-column bg--grid-yellow tech">
-            <h2 class="about__header">
-                PROJECTS
-            </h2>
+        <div class="container--flex-column bg--grid-yellow about">
+            <div class="about__header-container">
+                <h2 class="about__header">
+                    &#62; PROJECTS &#60;
+                </h2>
+            </div>
+
+
+            <div class="projects about__content">
+
+                <h3 class="projects__subheader">
+                    The projects i've worked on:
+                </h3>
+
+                <div class="projects__carousel-container">
+
+                    <div class="carousel">
+
+                        <div class="carousel__swapper-wrapper">
+
+                            <div class="carousel__slider">
+
+                                <video id="slide-1" class="carousel__video" muted autoplay loop disablePictureInPicture = true>
+                                    <source src="../media/video/about/project_0.webm" type="video/webm"> 
+                                </video>
+
+                                <video id="slide-2" class="carousel__video" muted autoplay loop disablePictureInPicture = true>
+                                    <source src="../media/video/about/project_1.webm" type="video/webm"> 
+                                </video>
+
+                                <video id="slide-3" class="carousel__video" muted autoplay loop disablePictureInPicture = true>
+                                    <source src="../media/video/about/project_2.webm" type="video/webm"> 
+                                </video>
+                
+                            </div>
+
+                            <div class="carousel__slider-nav">
+                                <a href="#slide-1"></a>
+                                <a href="#slide-2"></a>
+                                <a href="#slide-3"></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="projects__text-container">
+
+                    <p class="projects__text">
+                        <b>Desktop App Development</b> <br> <br>
+                        C#, .NET FrameWork, SQL, ADO.NET // Entity Framework, Web API, PostMan
+                    </p>
+                    
+                    <p class="projects__text">
+                        <b>3D Modeling</b> <br> <br>
+                        Blender, Substance Painter
+                    </p>
+                    
+                    <p class="projects__text">
+                        <b>Game Development</b> <br> <br>
+                        Unity Engine
+                    </p>
+                </div>
+
+            </div>
         </div>
         
         <!-- Contact Me -->

@@ -206,3 +206,19 @@ hamburger_button_link[4].onmouseover = event =>
     }, 30);
 }
 // Hamburger Menu End
+
+
+//Parallax
+document.addEventListener("mousemove", parallax);
+
+function parallax(e)
+{
+    document.querySelectorAll(".parallax-card").forEach(function(move)
+    {
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 250;
+        var y = (e.clientY * moving_value) / 250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+    });
+}

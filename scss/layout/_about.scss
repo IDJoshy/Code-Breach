@@ -1,0 +1,161 @@
+// About.html
+
+.about
+{
+    justify-content: flex-start;
+    gap: 3rem;
+
+    &__header-container
+    {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 50px;
+    }
+
+    &__header
+    {
+        font-family: "Terminus (TTF)";
+        font-weight: 900;
+        font-size: 2em;
+        color: $color-yellow;
+    }
+
+    &__content
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        gap: 3rem;
+        margin-bottom: 50px;
+        padding: 0 5px;
+    }
+}
+
+.about-me
+{
+
+    &__image-container
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    &__image
+    {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 1px solid $color-yellow;
+    }
+
+    &__parallax-card
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__parallax-effect
+    {
+        width: 270px;
+        height: 400px;
+    }
+
+    &__text-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 270px;
+        height: 400px;
+        padding: 10px 10px;
+
+        background-image: linear-gradient(45deg, #242424, #24242492, #20202092);
+    }
+
+    &__header
+    {
+        font-family: "Terminus (TTF)";
+        font-weight: 900;
+        font-size: 1.15em;
+        color: $color-yellow;
+        text-align: center;
+    }
+
+    &__introduction
+    {
+        font-family: Inconsolata;
+        font-size: 1em;
+        color: $color-default;
+        text-align: justify;
+    }
+}
+
+.tech-stack
+{
+    &__subheader
+    {
+        font-family: Inconsolata;
+        font-size: 1em;
+        color: $color-cyan;
+    }
+
+    &__card-container
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        padding: 0px 15px;
+        gap: 1rem;
+    }
+}
+
+.projects
+{
+    &__subheader
+    {
+        font-family: Inconsolata;
+        font-size: 1em;
+        color: $color-cyan;
+    }
+
+    &__carousel-container
+    {
+        width: 100%;
+        height: fit-content;
+        padding: 0px 15px;
+    }
+
+    &__text-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        padding: 0px 15px;
+        gap: 2rem;
+
+    }
+
+    &__text
+    {
+        font-family: Inconsolata;
+        font-size: 1em;
+        color: $color-default;
+        text-align: center;
+        width: 100%;
+        height: fit-content;
+    }
+}

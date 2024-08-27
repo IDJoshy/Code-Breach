@@ -20,7 +20,7 @@ $bg-gradient-dark: linear-gradient(45deg, $color-shadow, #242424, #303030);
 $bg-gradient-light: linear-gradient(45deg, #572ea9, #7459a9, #bdb1d5);
 
 //Card
-$card-bg-gradient: linear-gradient(90deg, #614385, #516395, #67abbc);
+$card-bg-gradient: linear-gradient(45deg, rgba(69,94,135,1) 0%, rgba(47,134,117,1) 50%, rgba(10,175,179,1) 100%);
 
 //Breakpoints Horizontal
 $mobile-md-h-breakpoint: 375px;

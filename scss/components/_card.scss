@@ -5,12 +5,12 @@
     display: flex;
     flex-direction: column;
     width: 200px;
-    height: 275px;
+    height: 290px;
     overflow: hidden;  
     border-radius: 15px;
 
     background-image: $card-bg-gradient; 
-    border: $color-default solid 1px;      
+    border: $color-cyan solid 1px;      
 
     background-size: 250%;
     background-position: left;
@@ -21,6 +21,58 @@
     &:focus
     {
         background-position: right;
+    }
+
+    &__image-container
+    {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        
+    }
+
+    &__image
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__header
+    {
+        font-family: "Terminus (TTF)";
+        text-align: center;
+        font-size: 1.25em;
+        font-weight: 700;
+        color: white;
+    }
+}
+
+
+.parallax-card
+{
+    &__effect-container
+    {
+        position: absolute;
+        z-index: 1;
+        $parallax-card-corner-size: 10px; /* the size on the corner */
+        $parallax-card-corner-thickness: 1px;  /* the thickness of the border */
+        $parallax-card-corner-gap: 5px; /* the gap between the border and image */
+        
+        padding: calc($parallax-card-corner-gap + $parallax-card-corner-thickness);
+        outline: $parallax-card-corner-thickness solid #ffffff; /* the color here */
+        outline-offset: calc(-1 * $parallax-card-corner-thickness);
+        mask:
+          conic-gradient(at $parallax-card-corner-size $parallax-card-corner-size,#0000 75%,#000 0)
+          0 0/calc(100% - $parallax-card-corner-size) calc(100% - $parallax-card-corner-size),
+          linear-gradient(#000 0 0) content-box;
+        transition: .25s;
+
+        &:hover,
+        :focus
+        {
+            outline-offset: calc($parallax-card-corner-gap/-1);
+        }
     }
 }
 
