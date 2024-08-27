@@ -285,7 +285,7 @@
 
     </section>
 
-    <main class="main">
+    <main class="main index">
 
         <!-- Hero -->
         <div class="index--hero">
@@ -447,15 +447,20 @@
         <!-- Contact Me -->
         <div id="contact" class="container--flex-column bg--gradient-dark contact"> 
 
-            <h2 class="contact--header">&#62; CONTACT ME &#60;</h2>
+            <h2 class="contact__header">&#62; CONTACT ME &#60;</h2>
 
-            <div class="contact--container">
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact--form">
+            <div class="contact__container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+
                     <input type="hidden" name="access_key" value="88220a4e-0d82-4972-85ab-f7bfed058c3c">
-                    <input class="contact--input" type="text" name="name" placeholder="Your Name" required autocomplete="cc-name">
-                    <input class="contact--input" type="email" name="email" placeholder="Your Email" required autocomplete="email">
-                    <textarea class="contact--input contact--input-message" name="message" placeholder="Your Message" required></textarea>
-                    <button class="contact--button" type="submit">
+
+                    <input class="contact__input" type="text" name="name" placeholder="Your Name" required autocomplete="cc-name">
+
+                    <input class="contact__input" type="email" name="email" placeholder="Your Email" required autocomplete="email">
+
+                    <textarea class="contact__input contact__input--message" name="message" placeholder="Your Message" required></textarea>
+
+                    <button class="contact__button" type="submit">
                         Send Message
                     </button>
 
@@ -466,8 +471,8 @@
 
         <!-- Fixed Button -->
         <div class="mail mail--hidden">
-            <a class="mail--link" href="#contact"> 
-                <img class="mail--icon" src="./media/image/contact/mail.png" alt="Contact Me Via Email">
+            <a class="mail__link" href="#contact"> 
+                <img class="mail__icon" src="./media/image/contact/mail.png" alt="Contact Me Via Email">
             </a>
         </div>
 
