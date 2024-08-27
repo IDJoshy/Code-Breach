@@ -66,6 +66,13 @@
         linear-gradient(to right, $bg-color-blue 1px, transparent 1px),
         linear-gradient(to bottom, $bg-color-blue 1px, transparent 1px);
     } 
+    @else if ($grid-bg-color == violet)
+    {
+        background-image: 
+        linear-gradient(to right, $bg-color-violet 1px, transparent 1px),
+        linear-gradient(to bottom, $bg-color-violet 1px, transparent 1px);
+    }
+
     @else
     {
         background-image: none;
@@ -135,6 +142,10 @@
 {
     @include bg-grid(yellow);
 }
+.bg--grid-violet
+{
+    @include bg-grid(violet);
+}
 
 //Background Gradient
 
@@ -176,3 +187,13 @@
 }
 
 /* #endregion */
+
+
+/* BEM 
+
+block-name__element-name
+
+.block__elem--mod
+
+
+*/

@@ -3,47 +3,60 @@
     // Navbar Hamburger Menu
     @media screen and (max-height: 425px)
     {
-        .hamburger__content
+        .hamburger-menu
         {
-            grid-template-areas: "hamburger_links hamburger_socials";
-            grid-template-columns: 2fr 1fr;
-        }
-
-        .hamburger__socials
-        {
-            align-self: center;
-            margin: 0px;
-            &--list
+            &__content
             {
-                flex-direction: column;
-                gap: 25px;
+                grid-template-areas: "hamburger_links hamburger_socials";
+                grid-template-columns: 2fr 1fr;
+            }
+
+            &__list-container
+            {
+                &--socials
+                {
+                    align-self: center;
+                    margin: 0px;
+                }
+            }
+
+            &__list
+            {
+                &--socials
+                {
+                    flex-direction: column;
+                    gap: 25px;
+                }
             }
         }
     }
 
     @media screen and (max-height: 360px)
     {
-        .hamburger__links
+
+        .hamburger-menu
         {
-            margin-top: 2.5px;
-            &--list
+            &__list-container
             {
-                gap: 2.5px;
+                margin-top: 2.5px;
+            }
+
+            &__list
+            {
+                &--socials
+                {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                &--links
+                {
+                    gap: 2.5px;
+                }
             }
         }
 
-
-        .hamburger__socials
-        {
-
-            &--list
-            {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
     }
-
 
     /* Mobile Small */
     @media screen and (max-width: ($mobile-md-h-breakpoint - 1))    
@@ -77,33 +90,34 @@
 
         /* #region NavBar */
 
-        .navbar__content
+        .navbar-menu
         {
-            grid-template-areas: "links socials get";
-            grid-template-columns: 1fr auto auto;
-
-            &--button
+            &__content
             {
-                display: none;
+                grid-template-areas: "links socials steam";
+                grid-template-columns: 1fr auto auto;
             }
 
-            &--link
+            &__button
             {
-                margin-right: 2rem;
+                &--hamburger
+                {
+                    display: none;
+                }
+
+                &--steam
+                {
+                    margin-right: 2rem;
+                }
+            }
+
+            &__list-container
+            {
+                display: flex;
             }
         }
 
-        .navbar__links
-        {
-            display: flex;
-        }
-
-        .navbar__socials
-        {
-            display: block;
-        }
-
-        .hamburger__menu
+        .hamburger-menu
         {
             display: none;
         }

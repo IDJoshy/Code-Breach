@@ -1,6 +1,6 @@
 /*#region card*/
 
-@mixin card-container()
+.card
 {
     display: flex;
     flex-direction: column;
@@ -16,12 +16,6 @@
     background-position: left;
 
     transition: background-position .25s ease-out;
-
-}
-
-.card
-{
-    @include card-container();
 
     &:hover,
     &:focus

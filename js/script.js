@@ -15,28 +15,28 @@ window.addEventListener("load", () =>
     })
 })
 
-const loader_images = document.querySelectorAll('.loader__content--image');
+const loader_images = document.querySelectorAll('.loader__image');
 
 let loader_images_index = 0;
 const loader_images_time = 250;
 
 function loader_images_animation() {
-    loader_images[loader_images_index].classList.remove('loader__content--image-active');
+    loader_images[loader_images_index].classList.remove('loader__image--active');
     loader_images_index = (loader_images_index + 1) % loader_images.length;
-    loader_images[loader_images_index].classList.add('loader__content--image-active');
+    loader_images[loader_images_index].classList.add('loader__image--active');
 }
 
 setInterval(loader_images_animation, loader_images_time);
 
 // Hamburger Menu
 
-const hamburger__menu = document.querySelector(".hamburger__menu");
+const hamburger__menu = document.querySelector(".hamburger-menu");
 
-const hamburger_button = document.querySelector(".navbar__content--button");
+const hamburger_button = document.querySelector(".navbar-menu__button--hamburger");
 
-const hamburger_icon_open = document.querySelector(".navbar__button--icon-open");
+const hamburger_icon_open = document.querySelector(".navbar-menu__icon-open");
 
-const hamburger_icon_close = document.querySelector(".navbar__button--icon-close");
+const hamburger_icon_close = document.querySelector(".navbar-menu__icon-close");
 
 var hamburger__menu__status = new Boolean(false);
 
@@ -56,25 +56,25 @@ hamburger_button.addEventListener("click", () =>
 
 function ToggleMenu()
 {
-    hamburger_icon_open.classList.add("navbar__button--hidden");
-    hamburger_icon_close.classList.remove("navbar__button--hidden");
-    hamburger__menu.classList.remove("navbar__menu--hidden");
+    hamburger_icon_open.classList.add("navbar-menu__icon--hidden");
+    hamburger_icon_close.classList.remove("navbar-menu__icon--hidden");
+    hamburger__menu.classList.remove("hamburger-menu--hidden");
 }
 
 function UnToggleMenu()
 {
-    hamburger_icon_open.classList.remove("navbar__button--hidden");
-    hamburger_icon_close.classList.add("navbar__button--hidden");
-    hamburger__menu.classList.add("navbar__menu--hidden");
+    hamburger_icon_open.classList.remove("navbar-menu__icon--hidden");
+    hamburger_icon_close.classList.add("navbar-menu__icon--hidden");
+    hamburger__menu.classList.add("hamburger-menu--hidden");
 }
 
 // hamburger menu animations
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
 
-const hamburger_button_link = document.querySelectorAll(".hamburger__button--link");
-const hamburger_button_link_text = document.querySelectorAll(".hamburger__button--link-text");
-const hamburger_button_link_image = document.querySelectorAll(".hamburger__button--image");
+const hamburger_button_link = document.querySelectorAll(".hamburger-menu__link--animated");
+const hamburger_button_link_text = document.querySelectorAll(".hamburger-menu__text");
+const hamburger_button_link_image = document.querySelectorAll(".hamburger-menu__image");
 
 hamburger_button_link[0].onmouseover = event =>
 {

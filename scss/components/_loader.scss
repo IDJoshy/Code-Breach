@@ -13,41 +13,39 @@
     background-color: rgba(0, 0, 0, .5);
     transition: opacity 1.5s, visibility 1.5s;
 
-    &--hidden
-    {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-.loader__content
-{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: fixed;
-    bottom: 55px;
-    right: 55px;
-
-    &--image
+    &__image
     {
         opacity: 0;
         width: 30px;
         height: 30px;
         position: absolute;
 
-        &-active
+        &--active
         {
             opacity: 1;
         }
 
     }
 
+    &__content
+    {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        position: fixed;
+        bottom: 55px;
+        right: 55px;
+    
+    }
+
+    &--hidden
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
-
-
 
 /* #endregion */
