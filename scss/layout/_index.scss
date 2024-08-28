@@ -81,11 +81,14 @@
 
         &-columns
         {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            row-gap: 2.5rem;
-            align-content: center;
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            gap: 2.5rem;
         }
 
     }
@@ -118,10 +121,14 @@
         &-column
         {
             margin-top: 25px;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-            row-gap: 5vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            padding: 0px 15px;
+            gap: 2.5rem;
         }
     }
 
@@ -163,7 +170,9 @@
 {
     @include display-centered(flex);
     flex-direction: column;
+    justify-content: flex-start;
     width: 275px;
+    height: 445px;
     padding: 5px;
     row-gap: 2rem;
 
@@ -180,6 +189,7 @@
         width: 100%;
         height: 100%;
         border: 1px solid white;
+        align-self: flex-start;
     }
 
     &-header
@@ -204,7 +214,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 280px;
+    width: 270px;
+    height: 305px;
     row-gap: 2rem;
 
     &-container

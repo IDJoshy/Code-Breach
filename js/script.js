@@ -222,3 +222,17 @@ function parallax(e)
         move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
     });
 }
+
+//Shop Logic
+
+const shop__error = document.querySelector(".shop__error");
+
+function ToggleErrorMenu()
+{
+    shop__error.classList.remove("shop__error--hidden");
+}
+
+function UnToggleErrorMenu()
+{
+    shop__error.classList.add("shop__error--hidden");
+}

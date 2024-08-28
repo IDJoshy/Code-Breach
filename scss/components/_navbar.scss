@@ -1,5 +1,10 @@
 /* #region navbar */
 
+.navbar
+{
+    padding: 0;
+}
+
 .navbar-menu
 {
     position: fixed;
@@ -12,6 +17,7 @@
 
     backdrop-filter: blur(2.4px);
     background-color: rgba(0, 0, 0, .4);
+    padding: 0px;
 
     &__content
     {
@@ -108,6 +114,8 @@
         flex-direction: row;
         align-items: center;
         list-style: none;
+        margin-bottom: 0px;
+        padding-left: 0px;
 
         &--links
         {
@@ -248,6 +256,9 @@
     {
         display: flex;
         list-style: none;
+        margin-bottom: 0;
+        padding-left: 0px;
+
 
         &--links
         {
@@ -349,6 +360,7 @@
         text-decoration: none;
         text-align: center;
         color: $color-yellow;
+        margin-bottom: 0px;
 
         &--current
         {
