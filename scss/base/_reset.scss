@@ -23,7 +23,9 @@ div
     font-family: Terminus;
     src: url(../fonts/Terminus.woff) format('woff'), /* modern browsers */
          url(../fonts/Terminus.ttf) format('truetype')
-         url(../fonts/terminus.ttf) format("truetype"); /* Safari, Android, iOS */;
+         url(../fonts/terminus.ttf) format("truetype");
+    
+    font-display: swap;     /* Safari, Android, iOS */;
 }
 
 body
