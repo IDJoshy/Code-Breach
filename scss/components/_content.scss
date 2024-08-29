@@ -1,0 +1,47 @@
+// Content
+.content 
+{
+    justify-content: flex-start;
+    gap: 5vh;
+
+    &__header-container
+    {
+        width: fit-content;
+        height: fit-content;
+        margin-top: 50px;
+        margin-bottom: 25px;
+
+        @include display-centered(flex);
+        flex-direction: column;
+
+        gap: 55px;
+    }
+
+    &__header
+    {
+        font-family: "Terminus (TTF)";
+        font-weight: 900;
+        font-size: 2em;
+        text-align: center;
+        color: $color-yellow;
+    }
+
+    &__subheader
+    {
+        font-family: Inconsolata;
+        font-size: 1em;
+        text-align: center;
+        color: $color-cyan;
+    }
+
+    &__content-container
+    {
+        @include display-centered(flex);
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        gap: 3rem;
+        margin-bottom: 50px;
+        padding: 0 5px;
+    }
+}

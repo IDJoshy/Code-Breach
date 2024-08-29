@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../media/image/ephemeral_icon.webp">
+    <link rel="shortcut icon" href="../media/image/ephemeral_icon_small.webp">
 
     <title>About Me | Code-Breach</title>
     <meta name="description" content="Learn more about Joshua Willian. solo developer, and creator of Code-Breach.">
     <meta name="author" content="Joshua Willian Auristondo Gonzales" />
     <meta name="copyright" content="Copyright Owner" />
-    <meta name="keywords" content="">
+    <meta name="keywords" content="Developer, Projects, Stack, About">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://code-breach-game.vercel.app/pages/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Me | Code-Breach">
+    <meta property="og:description" content="Learn more about Joshua Willian. solo developer, and creator of Code-Breach.">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="code-breach-game.vercel.app">
+    <meta property="twitter:url" content="https://code-breach-game.vercel.app/pages/about.html">
+    <meta name="twitter:title" content="About Me | Code-Breach">
+    <meta name="twitter:description" content="Learn more about Joshua Willian. solo developer, and creator of Code-Breach.">
+    <meta name="twitter:image" content="">
 
     <!-- styles -->
     <link rel="stylesheet" href="../css/style.css">
@@ -320,15 +335,13 @@
         </div>
 
         <!-- About Me -->
-        <div class="container--flex-column bg--grid-violet about">
+        <div class="container--flex-column bg--grid-violet content">
 
-            <div class="about__header-container">
-                <h2 class="about__header">
-                    &#62; ABOUT ME &#60;
-                </h2>
+            <div class="content__header-container">
+                <h2 class="content__header">&#62; ABOUT ME &#60;</h2>
             </div>
 
-            <div class="about-me about__content">
+            <div class="about-me content__content-container">
 
                 <div class="about-me__image-container">
                     <img class="about-me__image" src="../media/image/about/introduction.webp" alt="About Me Image">
@@ -364,18 +377,14 @@
         </div>
 
         <!-- Tech Stack -->
-        <div class="container--flex-column bg--grid-blue about">
-            <div class="about__header-container">
-                <h2 class="about__header">
-                    &#62; TECH STACK &#60;
-                </h2>
+        <div class="container--flex-column bg--grid-blue content">
+
+            <div class="content__header-container">
+                <h2 class="content__header">&#62; TECH STACK &#60;</h2>
+                <h3 class="content__subheader">I have experience with:</h3>
             </div>
 
-            <div class="tech-stack about__content"> 
-
-                <h3 class="tech-stack__subheader">
-                    I have experience with:
-                </h3>
+            <div class="tech-stack content__content-container"> 
 
                 <div class="tech-stack__card-container">
 
@@ -458,19 +467,14 @@
         </div>
 
         <!-- Projects -->
-        <div class="container--flex-column bg--grid-yellow about">
-            <div class="about__header-container">
-                <h2 class="about__header">
-                    &#62; PROJECTS &#60;
-                </h2>
+        <div class="container--flex-column bg--grid-yellow content">
+
+            <div class="content__header-container">
+                <h2 class="content__header">&#62; PROJECTS &#60;</h2>
+                <h3 class="content__subheader">The projects i've worked on:</h3>
             </div>
 
-
-            <div class="projects about__content">
-
-                <h3 class="projects__subheader">
-                    The projects i've worked on:
-                </h3>
+            <div class="projects content__content-container">
 
                 <div class="projects__carousel-container">
 
@@ -495,9 +499,9 @@
                             </div>
 
                             <div class="carousel__slider-nav">
-                                <a href="#slide-1"></a>
-                                <a href="#slide-2"></a>
-                                <a href="#slide-3"></a>
+                                <a aria-label="Carousel navigation link 1" href="#slide-1"></a>
+                                <a aria-label="Carousel navigation link 1" href="#slide-2"></a>
+                                <a aria-label="Carousel navigation link 1" href="#slide-3"></a>
                             </div>
 
                         </div>
@@ -530,7 +534,10 @@
         <!-- Contact Me -->
         <div id="contact" class="container--flex-column bg--gradient-dark contact"> 
 
-            <h2 class="contact__header">&#62; CONTACT ME &#60;</h2>
+            <div class="content__header-container">
+                <h2 class="content__header">&#62; CONTACT ME &#60;</h2>
+                <h3 class="content__subheader">We would love to hear from you</h3>
+            </div>
 
             <div class="contact__container">
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
@@ -573,7 +580,7 @@
                     </video>
                 </div>
     
-                <img class="footer__content--image" src="../media/image/ephemeral_icon.webp" alt="Ephemeral Josh">
+                <img class="footer__content--image" src="../media/image/ephemeral_icon_small.webp" alt="Ephemeral Josh">
     
                 <div class="footer__links">
                     <a class="footer__links--link" title="instagram" href="https://www.instagram.com/iosh.aa/" target="_blank" rel="noopener noreferrer"> Instagram </a>

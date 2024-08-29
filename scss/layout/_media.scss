@@ -1,0 +1,19 @@
+/* #region Media */
+
+.media
+{
+    &__image-container
+    {
+        width: 75vw;
+        height: fit-content;
+        border: 1px solid $color-default;
+    }
+
+    &__image
+    {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* #endregion */
