@@ -138,11 +138,15 @@ div {
 
 @font-face {
   font-family: "Terminus (TTF)";
-  src: url(../media/fonts/Terminus.ttf) format("truetype");
+  src: url(../fonts/terminus.ttf) format("truetype");
   font-display: swap;
 }
+@font-face {
+  font-family: Terminus;
+  src: url(../fonts/Terminus.woff) format("woff"), url(../fonts/Terminus.ttf) format("truetype");
+}
 body {
-  font-family: Inconsolata, "Terminus (TTF)";
+  font-family: Inconsolata, Terminus;
   background-color: #181818;
   color: #c6d4d4;
   overflow-x: hidden;
@@ -174,7 +178,7 @@ a {
   gap: 55px;
 }
 .content__header {
-  font-family: "Terminus (TTF)";
+  font-family: Terminus;
   font-weight: 900;
   font-size: 2em;
   text-align: center;
@@ -254,7 +258,7 @@ a {
   padding: 0.875rem 1.5rem;
   margin-right: 1.25rem;
   gap: 0.75rem;
-  font-family: "Terminus (TTF)";
+  font-family: Terminus;
   font-size: 1.125rem;
   color: #e9bc29;
 }
@@ -474,7 +478,7 @@ a {
   padding: 0px 15px;
 }
 .hero--content-header {
-  font-family: "Terminus (TTF)";
+  font-family: Terminus;
   font-size: 2.75em;
   font-weight: 700;
   color: #e9bc29;
@@ -515,7 +519,7 @@ a {
   --page-title-length: 9;
 }
 .hero--current-text {
-  font-family: "Terminus (TTF)";
+  font-family: Terminus;
   font-size: 1em;
   font-weight: 50;
   white-space: nowrap;
@@ -705,7 +709,7 @@ a {
 }
 
 .footer__links--link {
-  font-family: "Terminus (TTF)", monospace;
+  font-family: Terminus, monospace;
   font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
@@ -795,7 +799,7 @@ a {
   object-fit: cover;
 }
 .card__header {
-  font-family: "Terminus (TTF)";
+  font-family: Terminus;
   text-align: center;
   font-size: 1.25em;
   font-weight: 700;
@@ -968,7 +972,7 @@ a {
   color: #e9bc29;
 }
 .index--road-subheader {
-  font-family: "Terminus (TTF)", monospace;
+  font-family: Terminus, monospace;
   font-weight: 500;
   font-size: 1.15em;
   color: #c6d4d4;
@@ -997,13 +1001,13 @@ a {
   color: #e9bc29;
 }
 .index--requirements-subheader {
-  font-family: "Terminus (TTF)", monospace;
+  font-family: Terminus, monospace;
   font-weight: 500;
   font-size: 1em;
   color: #c6d4d4;
 }
 .index--requirements-status {
-  font-family: "Terminus (TTF)", monospace;
+  font-family: Terminus, monospace;
   font-weight: 500;
   font-size: 1.5em;
   color: #e11900;
@@ -1033,7 +1037,7 @@ a {
   align-self: flex-start;
 }
 .feature--card-header {
-  font-family: "Terminus (TTF)", monospace;
+  font-family: Terminus, monospace;
   font-size: 1.15em;
   text-align: center;
   color: #4ff0f8;
@@ -1078,7 +1082,7 @@ a {
   transition: 0.5s ease-in-out;
 }
 .road--card-header {
-  font-family: "Terminus (TTF)", monospace;
+  font-family: Terminus, monospace;
   text-align: center;
   font-size: 1.2em;
   color: #7de2d2;
@@ -1127,7 +1131,7 @@ a {
   padding: 10px 10px;
 }
 .story__header {
-  font-family: "Terminus (TTF)";
+  font-family: Terminus;
   font-weight: 900;
   font-size: 1.15em;
   color: #e9bc29;
@@ -1165,7 +1169,7 @@ a {
   display: none;
 }
 .shop__error-header {
-  font-family: "Terminus (TTF)";
+  font-family: Terminus;
   font-size: 1.25em;
   text-align: center;
   color: #e9bc29;
@@ -1280,7 +1284,7 @@ a {
   background-image: linear-gradient(45deg, #242424, rgba(36, 36, 36, 0.5725490196), rgba(32, 32, 32, 0.5725490196));
 }
 .about-me__header {
-  font-family: "Terminus (TTF)";
+  font-family: Terminus;
   font-weight: 900;
   font-size: 1.15em;
   color: #e9bc29;
