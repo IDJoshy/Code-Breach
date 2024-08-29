@@ -137,13 +137,8 @@ div {
 }
 
 @font-face {
-  font-family: "Terminus (TTF)";
-  src: url(../fonts/terminus.ttf) format("truetype");
-  font-display: swap;
-}
-@font-face {
   font-family: Terminus;
-  src: url(../fonts/Terminus.woff) format("woff"), url(../fonts/Terminus.ttf) format("truetype");
+  src: url(../fonts/Terminus.woff) format("woff"), url(../fonts/Terminus.ttf) format("truetype") url(../fonts/terminus.ttf) format("truetype"); /* Safari, Android, iOS */
 }
 body {
   font-family: Inconsolata, Terminus;

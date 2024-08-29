@@ -20,15 +20,10 @@ div
 }
 
 @font-face {
-    font-family: "Terminus (TTF)";
-    src: url(../fonts/terminus.ttf) format("truetype");
-    font-display: swap;
-}
-
-@font-face {
     font-family: Terminus;
     src: url(../fonts/Terminus.woff) format('woff'), /* modern browsers */
-         url(../fonts/Terminus.ttf) format('truetype') /* Safari, Android, iOS */;
+         url(../fonts/Terminus.ttf) format('truetype')
+         url(../fonts/terminus.ttf) format("truetype"); /* Safari, Android, iOS */;
 }
 
 body
