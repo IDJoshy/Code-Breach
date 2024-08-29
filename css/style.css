@@ -9,18 +9,6 @@
   }
 }
 /* #region Prefabs*/
-.container--flex-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  max-height: 100%;
-  width: 100%;
-  padding-top: 4.75rem;
-  border-bottom: #e11900 1px solid;
-}
-
 .container--flex-column {
   display: flex;
   flex-direction: column;
@@ -111,14 +99,6 @@
   }
 }
 /* #endregion */
-/* BEM 
-
-block-name__element-name
-
-.block__elem--mod
-
-
-*/
 * {
   padding: 0;
   margin: 0;
@@ -756,7 +736,7 @@ a {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 45px;
+  bottom: 75px;
   right: 45px;
   z-index: 6;
   width: 30px;
@@ -1139,6 +1119,32 @@ a {
   font-size: 1em;
   color: #c6d4d4;
   text-align: justify;
+}
+
+.mechanics__text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  height: fit-content;
+  padding: 10px 10px;
+}
+.mechanics__paragraph {
+  font-family: Terminus;
+  font-weight: 900;
+  font-size: 1.15em;
+  color: #e9bc29;
+  text-align: center;
+}
+.mechanics__status {
+  font-family: Inconsolata;
+  font-size: 2em;
+  color: #e11900;
+  text-align: center;
+  height: fit-content;
+  padding: 10px 10px;
 }
 
 /* #endregion */

@@ -160,7 +160,7 @@
             {
                 .navbar-menu__icon
                 {
-                    fill: #ee2a7b;
+                    fill: map-get($socials, 'instagram');
                 }
             }
         }
@@ -171,7 +171,7 @@
             {
                 .navbar-menu__icon
                 {
-                    fill: white;
+                    fill: map-get($socials, 'github');
                 }
             }
         }
@@ -182,7 +182,7 @@
             {
                 .navbar-menu__icon
                 {
-                    fill: #0e76a8;
+                    fill: map-get($socials, 'linkedin');
                 }
             }
         }
@@ -299,7 +299,7 @@
         {
             :hover
             {
-                fill: #ee2a7b;
+                fill: map-get($socials, 'instagram');
             }
         }
 
@@ -307,7 +307,7 @@
         {
             :hover
             {
-                fill: white;
+                fill: map-get($socials, 'github');
             }
         }
 
@@ -315,7 +315,7 @@
         {
             :hover
             {
-                fill: #0e76a8;
+                fill: map-get($socials, 'linkedin');
             }
         }
     }

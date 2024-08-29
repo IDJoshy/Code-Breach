@@ -59,5 +59,36 @@
     }
 }
 
+.mechanics
+{
+    &__text-container
+    {
+        @include display-centered(flex);
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        height: fit-content;
+        padding: 10px 10px;
+    }
+
+    &__paragraph
+    {
+        font-family: Terminus;
+        font-weight: 900;
+        font-size: 1.15em;
+        color: $color-yellow;
+        text-align: center;
+    }
+
+    &__status
+    {
+        font-family: Inconsolata;
+        font-size: 2em;
+        color: $color-red;
+        text-align: center;
+        height: fit-content;
+        padding: 10px 10px;
+    }
+}
 
 /* #endregion */

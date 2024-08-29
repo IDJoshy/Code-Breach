@@ -112,13 +112,15 @@
     }
 }
 
-/* #region Prefabs*/
+//Socials colors
 
-//Container Flex
-.container--flex-row
-{
-    @include container-flex(row, center, center);
-}
+$socials: (
+    instagram: #ee2a7b,
+    github: white,
+    linkedin: #0e76a8
+);
+
+/* #region Prefabs*/
 
 .container--flex-column
 {
@@ -219,13 +221,3 @@
 }
 
 /* #endregion */
-
-
-/* BEM 
-
-block-name__element-name
-
-.block__elem--mod
-
-
-*/
