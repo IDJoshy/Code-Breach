@@ -236,3 +236,10 @@ function UnToggleErrorMenu()
 {
     shop__error.classList.add("shop__error--hidden");
 }
+
+//GOTO
+function goto(link)
+{
+    location.href = link.value;
+    window.open(link.value);
+}
