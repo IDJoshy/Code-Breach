@@ -69,28 +69,6 @@
         padding: 7.5rem 10px;
         row-gap: 7.5vh;
         justify-content: flex-start;
-
-        &-header
-        {
-            font-family: Inconsolata;
-            font-size: 1.25em;
-            font-weight: 900;
-            text-align: center;
-            color: $color-yellow;
-        }
-
-        &-columns
-        {
-            margin-top: 25px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: fit-content;
-            gap: 2.5rem;
-        }
-
     }
 
     &--road
@@ -101,69 +79,7 @@
         justify-content: flex-start;
 
         overflow-x: hidden;
-
-        &-header
-        {
-            font-family: Inconsolata;
-            font-size: 2em;
-            font-weight: 900;
-            color: $color-yellow;
-        }
-
-        &-subheader
-        {
-            font-family: Terminus, monospace;
-            font-weight: 500;
-            font-size: 1.15em;
-            color: $color-default;
-        }
-
-        &-column
-        {
-            margin-top: 25px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: fit-content;
-            padding: 0px 15px;
-            gap: 2.5rem;
-        }
     }
-
-    &--requirements
-    {
-        padding: 7.5rem 10px 2rem 10px;
-        gap: 7.5vh;
-        text-align: center;
-        justify-content: flex-start;
-
-        &-header
-        {
-            font-family: Inconsolata;
-            font-size: 1.5em;
-            font-weight: 900;
-            color: $color-yellow;
-        }
-
-        &-subheader
-        {
-            font-family: Terminus, monospace;
-            font-weight: 500;
-            font-size: 1em;
-            color: $color-default;
-        }
-
-        &-status
-        {
-            font-family: Terminus, monospace;
-            font-weight: 500;
-            font-size: 1.5em;
-            color: $color-red;
-        }
-    }
-
 }
 
 .feature--card

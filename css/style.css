@@ -160,11 +160,20 @@ a {
   text-align: center;
   color: #e9bc29;
 }
+.content__header--secondary {
+  font-size: 1.25em;
+}
 .content__subheader {
   font-family: Inconsolata;
   font-size: 1em;
+  font-weight: 500;
   text-align: center;
-  color: #4ff0f8;
+  color: #c6d4d4;
+}
+.content__subheader--secondary {
+  font-family: Terminus, monospace;
+  font-size: 1.15em;
+  color: #c6d4d4;
 }
 .content__content-container {
   display: flex;
@@ -176,6 +185,24 @@ a {
   gap: 3rem;
   margin-bottom: 50px;
   padding: 0 5px;
+}
+.content__columns-container {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 2.5rem;
+}
+.content__status-text {
+  font-family: Inconsolata;
+  font-size: 1.5em;
+  color: #e11900;
+  text-align: center;
+  height: fit-content;
+  font-style: normal;
 }
 
 /* #region navbar */
@@ -918,76 +945,12 @@ a {
   row-gap: 7.5vh;
   justify-content: flex-start;
 }
-.index--feature-header {
-  font-family: Inconsolata;
-  font-size: 1.25em;
-  font-weight: 900;
-  text-align: center;
-  color: #e9bc29;
-}
-.index--feature-columns {
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: fit-content;
-  gap: 2.5rem;
-}
 .index--road {
   padding: 7.5rem 10px 5rem 10px;
   gap: 6vh;
   text-align: center;
   justify-content: flex-start;
   overflow-x: hidden;
-}
-.index--road-header {
-  font-family: Inconsolata;
-  font-size: 2em;
-  font-weight: 900;
-  color: #e9bc29;
-}
-.index--road-subheader {
-  font-family: Terminus, monospace;
-  font-weight: 500;
-  font-size: 1.15em;
-  color: #c6d4d4;
-}
-.index--road-column {
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: fit-content;
-  padding: 0px 15px;
-  gap: 2.5rem;
-}
-.index--requirements {
-  padding: 7.5rem 10px 2rem 10px;
-  gap: 7.5vh;
-  text-align: center;
-  justify-content: flex-start;
-}
-.index--requirements-header {
-  font-family: Inconsolata;
-  font-size: 1.5em;
-  font-weight: 900;
-  color: #e9bc29;
-}
-.index--requirements-subheader {
-  font-family: Terminus, monospace;
-  font-weight: 500;
-  font-size: 1em;
-  color: #c6d4d4;
-}
-.index--requirements-status {
-  font-family: Terminus, monospace;
-  font-weight: 500;
-  font-size: 1.5em;
-  color: #e11900;
 }
 
 .feature--card {
@@ -1137,14 +1100,6 @@ a {
   font-size: 1.15em;
   color: #e9bc29;
   text-align: center;
-}
-.mechanics__status {
-  font-family: Inconsolata;
-  font-size: 2em;
-  color: #e11900;
-  text-align: center;
-  height: fit-content;
-  padding: 10px 10px;
 }
 
 /* #endregion */
@@ -1349,6 +1304,9 @@ a {
     flex-direction: column;
     gap: 25px;
   }
+  .index--hero-pretitle {
+    padding-top: 50px;
+  }
 }
 @media screen and (max-height: 360px) {
   .hamburger-menu__list-container {
@@ -1368,7 +1326,6 @@ a {
 /* Tablet */
 /* Desktop-Transition */
 @media screen and (min-width: 1024px) {
-  /* #region NavBar */
   .navbar-menu__content {
     grid-template-areas: "links socials steam";
     grid-template-columns: 1fr auto auto;
@@ -1385,7 +1342,17 @@ a {
   .hamburger-menu {
     display: none;
   }
-  /* #endregion */
+  .index--hero-pretitle {
+    font-size: 1.5vw;
+  }
+  .index--hero-title {
+    font-size: 3.5vw;
+  }
+  .index--hero-link {
+    width: 130px;
+    height: 50px;
+    font-size: 1em;
+  }
 }
 /* Laptop */
 /* Laptop Large */
@@ -1405,9 +1372,8 @@ a {
 }
 /* 4K*/
 @media screen and (min-width: 2560px) {
-  /* #region Footer */
   .footer__content {
-    gap: 7.5%;
+    gap: 7.5vh;
   }
   .footer__content--image {
     width: 350px;
@@ -1419,7 +1385,6 @@ a {
   .footer__links--link {
     font-size: 2.25rem;
   }
-  /* #endregion */
 }
 /* #endregion */
 

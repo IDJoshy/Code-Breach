@@ -29,6 +29,14 @@
                 }
             }
         }
+
+        .index
+        {
+            &--hero-pretitle
+            {
+                padding-top: 50px;
+            }
+        }
     }
 
     @media screen and (max-height: 360px)
@@ -67,7 +75,7 @@
     /* Mobile Medium */
     @media screen and (min-width: $mobile-md-h-breakpoint) and (max-width: ($mobile-lg-h-breakpoint - 1))
     {
-
+        
     }
 
     /* Mobile Large */
@@ -80,16 +88,12 @@
     @media screen and (min-width: $tablet-h-breakpoint) and (max-width: ($desktop-sm-h-breakpoint - 1))
     {
 
-
     }
 
     /* Desktop-Transition */
 
     @media screen and (min-width: $desktop-sm-h-breakpoint)
     {
-
-        /* #region NavBar */
-
         .navbar-menu
         {
             &__content
@@ -122,10 +126,27 @@
             display: none;
         }
 
-        /* #endregion */
+        .index
+        {
+            &--hero-pretitle
+            {
+                font-size: 1.5vw;
+            }
+
+            &--hero-title
+            {
+                font-size: 3.5vw;
+            }
+
+            &--hero-link
+            {
+                width: 130px;
+                height: 50px;
+                font-size: 1em;
+            }
+        }
 
     }
-
 
     /* Laptop */
     @media screen and (min-width: $desktop-sm-h-breakpoint) and (max-width: ($desktop-md-h-breakpoint - 1))
@@ -168,11 +189,10 @@
     /* 4K*/
     @media screen and (min-width: $desktop-lg-h-breakpoint)
     {
-        /* #region Footer */
-        
+        // Footer
         .footer__content
         {
-            gap: 7.5%;
+            gap: 7.5vh;
 
             &--image
             {
@@ -193,8 +213,6 @@
                 font-size: 2.25rem;
             }
         }
-        
-        /* #endregion */
     }
     
 /* #endregion */
