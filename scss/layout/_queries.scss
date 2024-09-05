@@ -66,28 +66,25 @@
 
     }
 
-    /* Mobile Small */
-    @media screen and (max-width: ($mobile-md-h-breakpoint - 1))    
-    {
-        
-    }
-
-    /* Mobile Medium */
-    @media screen and (min-width: $mobile-md-h-breakpoint) and (max-width: ($mobile-lg-h-breakpoint - 1))
-    {
-        
-    }
-
-    /* Mobile Large */
-    @media screen and (min-width: $mobile-lg-h-breakpoint) and (max-width: ($tablet-h-breakpoint - 1))
-    {
-
-    }
-
     /* Tablet */    
     @media screen and (min-width: $tablet-h-breakpoint) and (max-width: ($desktop-sm-h-breakpoint - 1))
     {
+        .about-me
+        {
+            &__parallax-effect
+            {
+                width: 400px;
+                height: 350px;
+            }
 
+            &__text-container
+            {
+                padding: 15px 15px;
+                gap: 30px;
+                width: 400px;
+                height: 350px;
+            }
+        }
     }
 
     /* Desktop-Transition */
@@ -126,93 +123,177 @@
             display: none;
         }
 
-        .index
+        //Content
+        .content
         {
-            &--hero-pretitle
+            &__header
             {
-                font-size: 1.5vw;
+                font-size: 2.25em;
+
+                &--secondary
+                {
+                    font-size: 1.75em;
+                }
             }
 
-            &--hero-title
+            &__subheader
             {
-                font-size: 3.5vw;
-            }
-
-            &--hero-link
-            {
-                width: 130px;
-                height: 50px;
-                font-size: 1em;
+                font-size: 1.30em;
             }
         }
+        
+        //Index
+        .index
+        {
+            &--hero
+            {
+                gap: 75px;
 
-    }
+                &-pretitle
+                {
+                    font-size: 1.5vw;
+                }
+    
+                &-title
+                {
+                    font-size: 3.75vw;
+                }
+    
+                &-link
+                {
+                    width: 130px;
+                    height: 50px;
+                    font-size: 1em;
+                }
+            }
 
-    /* Laptop */
-    @media screen and (min-width: $desktop-sm-h-breakpoint) and (max-width: ($desktop-md-h-breakpoint - 1))
-    {
+        }
+
+        // About Me
+        .about-me
+        {
+            margin-top: 35px;
+            margin-bottom: 100px;
+            flex-direction: row;
+            gap: 10%;
+
+            &__image
+            {
+                width: 300px;
+                height: 300px;
+            }
+
+            &__parallax-effect
+            {
+                width: 450px;
+                height: 400px;
+            }
+
+            &__text-container
+            {
+                padding: 15px 15px;
+                gap: 30px;
+                width: 450px;
+                height: 400px;
+            }
+
+            &__header
+            {
+                font-size: 1.35em;
+            }
+
+            &__introduction
+            {
+                font-size: 1.15em;
+            }
+        }
 
     }
 
     /* Laptop Large */
     @media screen and (min-width: $desktop-md-h-breakpoint) and (max-width: ($desktop-lg-h-breakpoint - 1))
     {
-
-        /* #region Footer */
-        
-        .footer__content
+        // About Me
+        .about-me
         {
-            &--image
+            &__image
+            {
+                width: 400px;
+                height: 400px;
+            }
+
+            &__parallax-effect
+            {
+                width: 500px;
+                height: 500px;
+            }
+
+            &__text-container
+            {
+                width: 500px;
+                height: 500px;
+            }
+
+            &__header
+            {
+                font-size: 2em;
+            }
+
+            &__introduction
+            {
+                font-size: 1.5em;
+            }
+        }
+
+        // Footer
+        .footer
+        {
+            &__image
             {
                 width: 200px;
                 height: 200px;
             }
 
-            &--text
+            &__text
+            {
+                font-size: 1.25rem;
+            }
+
+            &__link
             {
                 font-size: 1.25rem;
             }
         }
-
-        .footer__links
-        {
-            &--link
-            {
-                font-size: 1.25rem;
-            }
-        }
-        
-        /* #endregion */
-
     }
 
     /* 4K*/
     @media screen and (min-width: $desktop-lg-h-breakpoint)
     {
         // Footer
-        .footer__content
+        .footer
         {
-            gap: 7.5vh;
+            &__content
+            {
+                gap: 7.5vh;
+            }
 
-            &--image
+            &__image
             {
                 width: 350px;
                 height: 350px;
             }
 
-            &--text
+            &__text
             {
                 font-size: 2.25rem;
             }
-        }
 
-        .footer__links
-        {
-            &--link
+            &__link
             {
                 font-size: 2.25rem;
             }
         }
+        
     }
     
 /* #endregion */

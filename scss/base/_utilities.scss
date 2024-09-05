@@ -1,4 +1,4 @@
-/* #region container */
+// Container
 
 @mixin container-flex($flex-direction, $align-items, $justify-content)
 {
@@ -33,8 +33,6 @@
     max-height: fit-content;
     width: 100%;
 }
-
-/* #endregion */
 
 //Backgrounds
 
@@ -100,6 +98,74 @@
     animation: bg-gradient-anim 5s infinite alternate;
 }
 
+//Socials colors
+
+$socials: (
+    instagram: #ee2a7b,
+    github: white,
+    linkedin: #0e76a8
+);
+
+/* #region Utilities*/
+
+//Container
+.container--flex-column
+{
+    @include container-flex(column, center, center);
+}
+
+//Background Grids
+
+.bg
+{
+    &__video-container
+    {
+        position: absolute;
+        filter: brightness(.75);
+        height: 100vh;
+        width: 100%;
+        z-index: -5;
+    }
+
+    &__video
+    {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    &--grid-red
+    {
+        @include bg-grid(red);
+    }
+    &--grid-green
+    {
+        @include bg-grid(green);
+    }
+    &--grid-blue
+    {
+        @include bg-grid(blue);
+    }
+    &--grid-yellow
+    {
+        @include bg-grid(yellow);
+    }
+    &--grid-violet
+    {
+        @include bg-grid(violet);
+    }
+    &--gradient-dark
+    {
+        @include bg-gradient(dark);
+    }
+    &--gradient-light
+    {
+        @include bg-gradient(light);
+    }
+}
+
+//Animations
+
 @keyframes bg-gradient-anim
 {
     0% 
@@ -111,56 +177,6 @@
         background-position: right;
     }
 }
-
-//Socials colors
-
-$socials: (
-    instagram: #ee2a7b,
-    github: white,
-    linkedin: #0e76a8
-);
-
-/* #region Prefabs*/
-
-.container--flex-column
-{
-    @include container-flex(column, center, center);
-}
-
-//Background Grids
-.bg--grid-red
-{
-    @include bg-grid(red);
-}
-.bg--grid-green
-{
-    @include bg-grid(green);
-}
-.bg--grid-blue
-{
-    @include bg-grid(blue);
-}
-.bg--grid-yellow
-{
-    @include bg-grid(yellow);
-}
-.bg--grid-violet
-{
-    @include bg-grid(violet);
-}
-
-//Background Gradient
-
-.bg--gradient-dark
-{
-    @include bg-gradient(dark);
-}
-.bg--gradient-light
-{
-    @include bg-gradient(light);
-}
-
-//Common animations
 
 @keyframes translate-in
 {
@@ -218,6 +234,18 @@ $socials: (
         transform: translateY(0) scale(1);
     }
     
+}
+
+@keyframes fade-in
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
 }
 
 /* #endregion */

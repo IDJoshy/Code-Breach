@@ -9,6 +9,8 @@
     overflow: hidden;  
     border-radius: 15px;
 
+    align-items: center;
+
     background-image: $card-bg-gradient; 
     border: $color-cyan solid 1px;      
 
@@ -40,11 +42,11 @@
 
     &__header
     {
-        font-family: Terminus;
+        font-family: Inconsolata;
+        padding: 0 5px;
         text-align: center;
         font-size: 1.25em;
         font-weight: 700;
-
     }
 
     &__product-header
@@ -87,6 +89,131 @@
         :focus
         {
             outline-offset: calc($parallax-card-corner-gap/-1);
+        }
+    }
+}
+
+.feature--card
+{
+    @include display-centered(flex);
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 275px;
+    height: 445px;
+    padding: 5px;
+    row-gap: 2rem;
+
+    &-container
+    {
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        height: 250px;
+    }
+
+    &-image
+    {
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+        align-self: flex-start;
+    }
+
+    &-header
+    {
+        font-family: Terminus, monospace;
+        font-size: 1.15em;
+        text-align: center;
+        color: $color-cyan;
+    }
+
+    &-explanation
+    {
+        font-size: 1em;
+        text-align: center;
+        color: $color-default;
+    }
+}
+
+.road--card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 270px;
+    height: 305px;
+    row-gap: 2rem;
+
+    &-container
+    {
+        width: 175px;
+        height: 175px;
+
+        $road-corner-size: 10px; /* the size on the corner */
+        $road-corner-thickness: 2px;  /* the thickness of the border */
+        $road-corner-gap: 10px; /* the gap between the border and image */
+        
+        padding: calc($road-corner-gap + $road-corner-thickness);
+        outline: $road-corner-thickness solid #ffffff; /* the color here */
+        outline-offset: calc(-1 * $road-corner-thickness);
+        mask:
+          conic-gradient(at $road-corner-size $road-corner-size,#0000 75%,#000 0)
+          0 0/calc(100% - $road-corner-size) calc(100% - $road-corner-size),
+          linear-gradient(#000 0 0) content-box;
+        transition: .25s;
+
+        &:hover,
+        :focus
+        {
+            outline-offset: calc($road-corner-gap/-1);
+        }
+    }
+
+    &-icon
+    {
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+        pointer-events: none;
+        background-color: black;
+        transition: .5s ease-in-out;
+    }
+
+    &-header
+    {
+        font-family: Terminus, monospace;
+        text-align: center;
+        font-size: 1.2em;
+        color: #7de2d2;
+    }
+
+    &-explanation
+    {
+        font-size: 1em;
+        text-align: center;
+        color: white;
+    }
+
+    &-done
+    {
+        &:hover
+        {
+            .road--card-icon
+            {
+                background-color: darken($color-cyan, 30%);
+            }
+        }
+    }
+
+    &-undone
+    {
+        &:hover
+        {
+            .road--card-icon
+            {
+                background-color: $color-red;
+            }
         }
     }
 }

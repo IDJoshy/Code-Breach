@@ -6,23 +6,6 @@
     padding-top: 0;
     overflow: hidden;
 
-
-    &--background
-    {        
-        position: absolute;
-        filter: brightness(.75);
-        height: 100vh;
-        width: 100%;
-        z-index: -5;
-    
-        &-video
-        {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-    }
-
     &--content
     {
         display: flex;
@@ -39,6 +22,7 @@
             font-weight: 700;
             color: $color-yellow;
             width: fit-content;
+            animation: fade-in 1s;
         }
 
         &-subheader
@@ -48,6 +32,7 @@
             font-style: italic;
             color: $color-default;
             width: fit-content;
+            animation: translate-in 1s;
         }
 
 
@@ -105,20 +90,7 @@
             blink .4s step-end infinite alternate; 
         }
     }
-
-    &--card
-    {
-        width: 280px;
-        height: 175px;
-        align-self: center;
-
-
-        &-hidden
-        {
-            display: none;
-        }
-    }
-
+    
 }
 
 @keyframes line-stretch

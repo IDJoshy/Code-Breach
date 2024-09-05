@@ -13,19 +13,23 @@
         {
             font-family: Inconsolata;
             font-size: 1em;
+            font-style: italic;
             text-align: center;
             padding: 0px 10px;
-            color: #aaf9fa;
+            color: #00ffb7;
+            animation: fade-down 2s;
         }
 
         &-title
         {
-            font-family: Inconsolata;
+            font-family: Terminus;
             font-size: 2.25em;
             font-weight: 900;
             text-align: center;
             text-shadow: red -1px 0,
                         cyan 1px 0;
+            animation: fade-down 1.5s,
+            glitch 3s infinite alternate-reverse;
         }
 
         &-link
@@ -40,10 +44,11 @@
             border-bottom: .125rem solid $color-red;
     
             font-size: 1em;
-            color: $color-red;
+            color: $color-yellow;
             text-transform: uppercase;
             width: 125px;
             height: 50px;
+            animation: fade-down 1s;
         }
     }
 
@@ -82,127 +87,31 @@
     }
 }
 
-.feature--card
+@keyframes glitch 
 {
-    @include display-centered(flex);
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 275px;
-    height: 445px;
-    padding: 5px;
-    row-gap: 2rem;
-
-    &-container
+    0% 
     {
-        display: flex;
-        justify-content: center;
-        width: 250px;
-        height: 250px;
+        text-shadow: red -2px 0,
+        cyan 0px 0;
     }
-
-    &-image
+    5% 
     {
-        width: 100%;
-        height: 100%;
-        border: 1px solid white;
-        align-self: flex-start;
+        text-shadow: red -1px 1px,
+        cyan 1px 0;
     }
-
-    &-header
+    10% 
     {
-        font-family: Terminus, monospace;
-        font-size: 1.15em;
-        text-align: center;
-        color: $color-cyan;
+        text-shadow: red 1px 0,
+        cyan -2px 0;
     }
-
-    &-explanation
+    15% 
     {
-        font-size: 1em;
-        text-align: center;
-        color: $color-default;
+        text-shadow: red -3px 0,
+        cyan -1px 0;
     }
-}
-
-.road--card
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 270px;
-    height: 305px;
-    row-gap: 2rem;
-
-    &-container
+    20% 
     {
-        width: 175px;
-        height: 175px;
-
-        $road-corner-size: 10px; /* the size on the corner */
-        $road-corner-thickness: 2px;  /* the thickness of the border */
-        $road-corner-gap: 10px; /* the gap between the border and image */
-        
-        padding: calc($road-corner-gap + $road-corner-thickness);
-        outline: $road-corner-thickness solid #ffffff; /* the color here */
-        outline-offset: calc(-1 * $road-corner-thickness);
-        mask:
-          conic-gradient(at $road-corner-size $road-corner-size,#0000 75%,#000 0)
-          0 0/calc(100% - $road-corner-size) calc(100% - $road-corner-size),
-          linear-gradient(#000 0 0) content-box;
-        transition: .25s;
-
-        &:hover,
-        :focus
-        {
-            outline-offset: calc($road-corner-gap/-1);
-        }
-    }
-
-    &-icon
-    {
-        width: 100%;
-        height: 100%;
-        border: 1px solid white;
-        pointer-events: none;
-        background-color: black;
-        transition: .5s ease-in-out;
-    }
-
-    &-header
-    {
-        font-family: Terminus, monospace;
-        text-align: center;
-        font-size: 1.2em;
-        color: #7de2d2;
-    }
-
-    &-explanation
-    {
-        font-size: 1em;
-        text-align: center;
-        color: white;
-    }
-
-    &-done
-    {
-        &:hover
-        {
-            .road--card-icon
-            {
-                background-color: darken($color-cyan, 30%);
-            }
-        }
-    }
-
-    &-undone
-    {
-        &:hover
-        {
-            .road--card-icon
-            {
-                background-color: $color-red;
-            }
-        }
+        text-shadow: red -1px 0,
+        cyan 1px 0;
     }
 }

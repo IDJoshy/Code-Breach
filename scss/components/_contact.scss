@@ -103,7 +103,7 @@
     height: 45px;
 
     transition: .25s ease-in-out;
-    animation: mail-animation 1s;
+    animation: fade-up 2s;
     animation-iteration-count: 1;
 
     &__link
@@ -118,7 +118,7 @@
         background-size: 250%;
         background-position: left;
         border-radius: 50%;
-        animation: mail-link-animation 2.5s infinite alternate;
+        animation: bg-gradient-anim 2.5s infinite alternate;
     }
 
     &__icon
@@ -139,28 +139,4 @@
     }
 }
 
-@keyframes mail-animation 
-{
-    0% 
-    {
-        opacity: 0;
-
-    }
-    100% 
-    {
-        opacity: 1;
-    }
-}
-
-@keyframes mail-link-animation
-{
-    0% 
-    {
-        background-position: left;
-    }
-    100% 
-    {
-        background-position: right;
-    }
-}
 /* #endregion */
